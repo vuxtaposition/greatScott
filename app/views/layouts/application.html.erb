@@ -8,7 +8,65 @@
 </head>
 <body>
 
-<%= yield %>
+<body>
+<!-- Header -->
+    <section id="header">
+    <div class="wrapper">
+   <div id="outerHeader">
+   	<img src="/assets/header.png" width="100%" alt="header pic" />
+   </div>
+    </div><!-- end wrapper -->
+    </section>
+       <!-- makes a nice line below header -->
+		<div id="borderHolder">                       
+            <ul class="headerborder">
+                <li class="color1"></li>
+                <li class="color2"></li>
+                <li class="color3"></li>
+            </ul>
+        </div>
+    <!-- nav section -->
+     <section id="nav">
+    <div class="wrapper">
+    <div id="menuButton"><img src="/assets/buttonMenu.png" width="40" /></div>
+   <nav class="navbar">
+        <ul>
+            <li><a href ="#">Home</a></li>
+             <li><a href ="/items">Items</a></li>
+             <li><a href ="#">Products</a></li>
+            <li><a href ="#">Contact</a></li>
+        </ul>
+	</nav>
+    </div><!-- end wrapper -->
+    </section><!-- end header section -->
+    
+    <%= yield %>
+    
+<!-- footer -->
+ <!-- makes a nice line across footer -->
+   		<div id="borderHolder">                       
+            <ul class="headerborder">
+                <li class="color1"></li>
+                <li class="color2"></li>
+                <li class="color3"></li>
+            </ul>
+        </div>
+    <section id="footer">
+        <div class="wrapper">
+      <div id="outerFooter">
+      
+      <p>Copyright &copy; GreatScott!!
+    <script type="text/javascript">document.write(new Date().getFullYear());</script><br>
+    <ul>
+    <li>Alan Leoanrd</li>
+      <li>Edward Flynn</li>
+    </ul>
+   </div>
+    </div><!-- end wrapper -->
+    </section><!-- end footer -->
+
+
+</body>
 
 </body>
 </html>

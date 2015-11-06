@@ -1,15 +1,377 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body{
+	font-family: "Raleway", Helvetica, sans-serif;
+    font-size: 13pt;
+    font-weight: 400;
+    line-height: 2em;
+	background:#eee
+}
+#myYield{
+  width:80%;
+  margin: 0 auto;
+  padding:5px;
+  
+}
+.wrapper{
+	width: 1000px;
+    height: auto;
+    margin: 0 auto;
+	background:white;
+}
+#header{
+	background:#191919;	
+}
+#footer{
+		background:#191919;	
+}
+#content{
+	margin-top:10px;
+	HEIGHT:600px;	
+}
+#container{
+    width: 100%;
+    height: auto;
+    float: left;
+	padding-bottom:20px;
+	background:white;	
+}
+#imgLeft{
+	width: 65%;
+	height:300px;
+	background:#337ab7;
+	float:left;	
+}
+#rightText{
+	width: 27%;
+	height:300px;
+	float:right;
+	margin-right:30px;	
+	padding:10px;	
+}
+#outerHeader{
+	width: 100%;
+	background:#191919;
+	height:100px;	
+}
+
+.navbar{	
+	width: 100%;
+	height:33px;
+	background:#485a67;
+	margin-top:-10px;	
+}
+.navbar ul{
+	width: 100%;
+}
+.navbar ul li {
+	list-style:none;
+	position:relative;
+	float:left;	
+	width:10%;
+
+	
+}
+.navbar ul li a{
+	width:100px;
+	text-decoration:none;
+	color:white;
+	float: left;
+    text-align: center;	
+	  -webkit-transition: background 2s; 
+    transition: background 2s;
+}
+.navbar ul li a:hover{
+	color:brown;
+	height:33px;	
+	background:#191919;
+	opacity:0.8;
+}
+
+#outerSlider{
+	width: 100%;
+	background:cream;
+	height:300px;
+	clear:both;	
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+}
+#outerFooter{
+	width: 100%;
+	background:#191919;
+	height:auto;
+	clear:both;	
+	font-size:12px;
+	color:white;
+	line-height:22px;
+	paddint;5px;
+}
+#outerFooter p{
+	font-size:18px;
+	color:white;
+	padding-top:10px;	
+}
+#outerFooter ul{
+	padding-bottom:20px;	
+}
+#outerFooter ul li{
+	list-style:none;
+	line-height:18px;
+	color:white;
+}
+#coverThree {
+    width: 98%;
+    height: 300px;
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+#infoOne {
+    width: 29%;
+    position: relative;
+    height: 430px;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-left: 3%;
+    margin-top: 20px;
+    float: left;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #3575B9;
+}
+#infoTwo {
+    width: 29%;
+    position: relative;
+    height: 430px;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-left: 1%;
+    margin-top: 20px;
+    float: left;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #3575B9;
+}
+#infoThree {
+    width: 29%;
+    position: relative;
+    height: 430px;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-left: 1%;
+    margin-top: 20px;
+    float: left;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #3575B9;
+}
+		
+		/* css taken from a site to style small line across top of page*/
+		
+		#borderHolder {
+			width: 100%;
+			height: 5px;
+		}
+		.headerborder {
+			margin: 0;
+			padding: 0;
+			height: 5px;
+		}
+		.headerborder li {
+			float: left;
+			width: 33.3%;
+			height: 5px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: block;
+			margin-top: 3px;
+		}
+		.headerborder li.color1 {
+			background: #ff9f33;
+			background: -moz-linear-gradient(left,#ff9f33 0%,#ffb766 100%);
+			background: -webkit-gradient(linear,left top,right top,color-stop(0%,#ff9f33),color-stop(100%,#ffb766));
+			background: -webkit-linear-gradient(left,#ff9f33 0%,#ffb766 100%);
+			background: -o-linear-gradient(left,#ff9f33 0%,#ffb766 100%);
+			background: -ms-linear-gradient(left,#ff9f33 0%,#ffb766 100%);
+			background: linear-gradient(to right,#ff9f33 0%,#ffb766 100%);
+		}
+		.headerborder li.color2 {
+			background: #5bc0cc;
+			background: -moz-linear-gradient(left,#5bc0cc 0%,#82cfd8 100%);
+			background: -webkit-gradient(linear,left top,right top,color-stop(0%,#5bc0cc),color-stop(100%,#82cfd8));
+			background: -webkit-linear-gradient(left,#5bc0cc 0%,#82cfd8 100%);
+			background: -o-linear-gradient(left,#5bc0cc 0%,#82cfd8 100%);
+			background: -ms-linear-gradient(left,#5bc0cc 0%,#82cfd8 100%);
+			background: linear-gradient(to right,#5bc0cc 0%,#82cfd8 100%);
+			width: 33.4%;
+		}
+		.headerborder li.color3 {
+			background: #485a67;
+			background: -moz-linear-gradient(left,#485a67 0%,#5d7485 100%);
+			background: -webkit-gradient(linear,left top,right top,color-stop(0%,#485a67),color-stop(100%,#5d7485));
+			background: -webkit-linear-gradient(left,#485a67 0%,#5d7485 100%);
+			background: -o-linear-gradient(left,#485a67 0%,#5d7485 100%);
+			background: -ms-linear-gradient(left,#485a67 0%,#5d7485 100%);
+			background: linear-gradient(to right,#485a67 0%,#5d7485 100%);
+		}
+		
+		/* end of taken css*/
+		
+/* our own responsive menu button*/		
+#menuButton{
+	float: right;
+    height: 40px;
+    width: 40px;
+    display: none;
+}
+
+
+
+
+
+
+@media only screen and (min-width:768px ) and (max-width:1120px) {
+.wrapper{
+	width: 100%;
+
+}
+#infoOne {
+	width:94%;	
+	margin-left: 1%;
+}
+#infoTwo {
+	width:94%;	
+	margin-left: %;
+}
+#infoThree {
+	width:94%;
+	margin-left: 1%;	
+}
+}
+
+
+
+
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+.wrapper{
+	width: 100%;
+}
+#infoOne {
+	width:94%;	
+	margin-left: 1%;
+}
+#infoTwo {
+	width:94%;	
+	margin-left: %;
+}
+#infoThree {
+	width:94%;
+	margin-left: 1%;	
+}
+.navbar {
+    width: 35%;
+    height: 233px;
+    background: #485a67;
+    margin-top: -10px;
+    z-index: 9999;
+    position: absolute;
+    top: 125px;
+    float: right;
+    right: 10px;
+}
+.navbar ul li{
+float:none;	
+}
+#imgLeft{
+	width: 94%;
+	
+}
+#rightText{
+	width:94%;
+	float:left;
+	
+}
+#menuButton{
+	float: right;
+    height: 40px;
+    width: 40px;
+    display: block;
+	margin-right:20px;
+	margin-top:-50px;
+	cursor:pointer
+	
+}
+.navbar {
+	width: 100%;
+	display:none;
+}
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:479px) {
+.wrapper{
+	width: 100%;
+}
+#infoOne {
+	width:94%;	
+}
+#infoTwo {
+	width:94%;	
+}
+#infoThree {
+	width:94%;	
+}
+.navbar {
+    width: 35%;
+    height: 233px;
+    background: #485a67;
+    margin-top: -10px;
+    z-index: 9999;
+    position: absolute;
+    top: 125px;
+    float: right;
+    right: 10px;
+}
+.navbar ul li{
+float:none;	
+}
+.navbar ul li a{
+float:none;	
+}
+#imgLeft{
+	width: 94%;
+	height:170px;
+	
+}
+#rightText{
+	width:94%;
+	float:left;
+	height:auto;
+	
+}
+#menuButton{
+	float: right;
+    height: 40px;
+    width: 40px;
+    display: block;
+	margin-right:20px;
+	margin-top:-50px;
+	cursor:pointer
+	
+}
+.navbar {
+	width: 100%;
+	display:none;
+}
+#outerSlider{
+height:400px;	
+}
+}

@@ -25,51 +25,49 @@
         <div id="container">
         
   <div id="coverThree">
+  <% @items = Item.select('DISTINCT category') %>
+<!--
+<% @items.each do | c | %>
+	<a href="/category/<%= c.category %>" id="categorylisting"><%= c.category %></a>
+	<%= @items[1]%>
+ <% end %> 
+ -->
+
+
+
     <div id="infoOne">
-   
-
-      <div class="imgtag1">
-        <a href="book.php"><img src="" alt="mouse" width="50%" class=
-        "image_over" /></a>
-      </div>
-
-      <h2 class="htag_2"><a href="book.php">Products</a></h2>
+     <%= link_to image_tag("poster.png", :width => '50%',  :alt => "rss feed") %>
+      <h2 class=""><a href="book.php">Posters</a></h2>
 
       <div class="pullquote">
-        Why not book using the Classic Cabs mobile or desktop online service. Our latest
-        GPS technology allows you a quick and easy solution to access our booking system.
-        Watch the closest car drive to you live online!<br />
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too!<br />
         <br />
       </div>
     </div>
 
     <div id="infoTwo">
-      <a href="corporate.php"><img src="images/car.jpeg" class="carlink1" alt=
-      "taxi people" width="75%" /></a>
-
-      <h2 class="htag_2"><a href="corporate.php">Categories</a></h2>
-
+     <%= link_to image_tag("toys.png", :width => '75%',  :alt => "rss feed") %>
+      <h2 >
+        
+        <a href="">Toys</a></h2>
       <div class="pullquote">
-        Classic Cabs new executive division has grown through our unique service. Each
-        corporate account holder is assigned a personal account manager. Our software
-        will allow you specify what type of vehicle you require for all occasions.
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too
       </div>
     </div>
 
-    <div id="infoThree">
-      <img src="images/thedoor.png" alt="taxi" width="95%" class="image_over" />
+    <div id="infoThree"><br><br>
+    <%= link_to image_tag("games.png", :width => '75%',  :alt => "rss feed") %>
 
-      <h2 class="htag_2"><a href="about.php">Service</a></h2>
+      <h2>
+        
+        <a href="">Games</a></h2>
 
       <div class="pullquote">
-        The Classic Cabs call centre is controlled and supported 24 hours a day / 365
-        days per year by our highly trained, dedicated and efficient Customer Service
-        agent team. Book your taxi with the utmost confidence, there are a number of ways
-        to book your taxi.
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too
       </div>
     </div>
   </div>
-        
+  
         </div><!-- end container -->
         
          </div><!-- end warpper -->

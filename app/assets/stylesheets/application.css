@@ -4,6 +4,12 @@ body{
     line-height: 2em;
 	background:#eee
 }
+h2 a{
+	color:#191919;
+}
+h2 a:hover{
+	color:#039;
+}
 #myYield{
   width:80%;
   margin: 0 auto;
@@ -15,6 +21,14 @@ body{
 	display: block;
 	height: 40px;
 	padding-left: 3px;
+}
+#showMe{
+	display: none;
+	width: 35%;
+	margin-top: -250px;
+	margin-left: 180px;
+	z-index: 99999;
+	position: absolute;
 }
 .cato{
 	float: left;
@@ -70,7 +84,8 @@ body{
 	background:#191919;	
 }
 #footer{
-		background:#191919;	
+		background:#191919;
+		clear:both;
 }
 #content{
 /*	margin-top:10px; */
@@ -152,7 +167,7 @@ body{
 	font-size:12px;
 	color:white;
 	line-height:22px;
-	paddint;5px;
+	padding;5px;
 }
 #outerFooter p{
 	font-size:18px;
@@ -177,7 +192,7 @@ body{
 #infoOne {
     width: 29%;
     position: relative;
-    height: 430px;
+    height:530px;
     border: 1px solid grey;
     padding: 5px;
     margin-left: 3%;
@@ -190,7 +205,7 @@ body{
 #infoTwo {
     width: 29%;
     position: relative;
-    height: 430px;
+    height: 530px;
     border: 1px solid grey;
     padding: 5px;
     margin-left: 1%;
@@ -203,7 +218,7 @@ body{
 #infoThree {
     width: 29%;
     position: relative;
-    height: 430px;
+    height: 530px;
     border: 1px solid grey;
     padding: 5px;
     margin-left: 1%;
@@ -287,14 +302,17 @@ body{
 #infoOne {
 	width:94%;	
 	margin-left: 1%;
+	height:auto;
 }
 #infoTwo {
 	width:94%;	
-	margin-left: %;
+	margin-left: 1%;
+	height:auto;
 }
 #infoThree {
 	width:94%;
-	margin-left: 1%;	
+	margin-left: 1%;
+	height:auto;
 }
 }
 
@@ -309,14 +327,17 @@ body{
 #infoOne {
 	width:94%;	
 	margin-left: 1%;
+	height:auto;
 }
 #infoTwo {
 	width:94%;	
-	margin-left: %;
+	margin-left: 1%;
+	height:auto;
 }
 #infoThree {
 	width:94%;
-	margin-left: 1%;	
+	margin-left: 1%;
+	height:auto;
 }
 .navbar {
     width: 35%;
@@ -416,8 +437,12 @@ float:none;
 	cursor:pointer
 	
 }
+#showImageBig{
+	float:left
+}
+
 .navbar {
-	width: 100%;
+	width: 95%;
 	display:none;
 }
 #outerSlider{

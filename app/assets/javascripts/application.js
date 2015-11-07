@@ -1,11 +1,9 @@
-$(document).ready(function(){
-	
-	//display menu button in mobile
-    $("#menuButton").click(function(){
-        $('.navbar').toggle();
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
 
-    });
-	
-	
-	
-});
+
+
+
+
+

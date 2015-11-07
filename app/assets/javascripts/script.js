@@ -1,3 +1,6 @@
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
 $(document).ready(function(){
 	
 	//display menu button in mobile
@@ -6,7 +9,13 @@ $(document).ready(function(){
 
     });
 	
-	
-	
+		
+    $("#showImageBig").mouseover(function(){
+    $("#showMe").fadeIn('slow');
+    });	
+    
+    $("#showImageBig").mouseout(function(){
+    $("#showMe").fadeOut('slow');
+    });	
 });
 

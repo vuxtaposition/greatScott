@@ -24,7 +24,7 @@
         <td class="porductName" ><%= item.name %></td>
         <td><%= item.description %></td>
         <td><%= item.cost %></td>
-        <td><%= item.image %></td>
+        <td><%= link_to (image_tag item.image, :style => "height:100px"), item %></td>
         <td><%= item.category %></td>
         <td ><span class="mybtn"><%= link_to 'Show', item %></span></td>
         <td><span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span></td>

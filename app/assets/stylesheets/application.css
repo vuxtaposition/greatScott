@@ -74,6 +74,9 @@ h2 a:hover{
 .categoryListAll{
 	float: left;
 }
+.img_preview{
+	padding-top:10px;
+}
 .wrapper{
 	width: 1000px;
     height: auto;

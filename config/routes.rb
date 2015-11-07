@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   resources :items
+  
+  get '/category/:id' => 'items#category'
+  
+  post '/search' => 'items#search'
+
+  get '/cart/:id' => 'cart#index'
+  
   get 'static_pages/index'
 
   get 'static_pages/about'
@@ -7,6 +14,7 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
   get 'static_pages/mis'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

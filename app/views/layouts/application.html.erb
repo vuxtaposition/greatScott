@@ -13,7 +13,7 @@
     <section id="header">
     <div class="wrapper">
    <div id="outerHeader">
-   	<img src="/assets/header.png" width="100%" alt="header pic" />
+   <a href ="index">	<img src="/assets/header.png" width="100%" alt="header pic" /></a>
    </div>
     </div><!-- end wrapper -->
     </section>
@@ -31,13 +31,22 @@
     <div id="menuButton"><img src="/assets/buttonMenu.png" width="40" /></div>
    <nav class="navbar">
         <ul>
-            <li><a href ="#">Home</a></li>
+            <li><a href ="#"><%= link_to "Home", root_path %></a></li>
              <li><a href ="/items">Items</a></li>
              <li><a href ="#">Products</a></li>
             <li><a href ="#">Contact</a></li>
         </ul>
 	</nav>
+	<div id="searchDiv">
+	<span class="cato">categories:</span><%= render '/items/categoryDistinctList' %>
+	
+	<span class="searchbox">
+   <%= render :partial => 'items/search' %>
+  </span>
+  </div>
+  
     </div><!-- end wrapper -->
+    
     </section><!-- end header section -->
     
     <%= yield %>

@@ -3,17 +3,16 @@
       
         <div id="container">
             <div id="myYield">
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Items</h1>
+<h1>Listing items (Category: <%= @category %>)</h1>
 <div id="tableSurround">
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Title</th>
       <th>Description</th>
-      <th>Cost</th>
-      <th>Image</th>
+      <th>Price</th>
+      <th>Image url</th>
       <th>Category</th>
       <th colspan="3"></th>
     </tr>
@@ -22,14 +21,14 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td class="porductName"><%= item.name %></td>
+        <td class="porductName" ><%= item.name %></td>
         <td><%= item.description %></td>
         <td><%= item.cost %></td>
-        <td><%= link_to (image_tag item.image, :style => "height:100px"), item %></td>
+        <td><%= item.image %></td>
         <td><%= item.category %></td>
         <td ><span class="mybtn"><%= link_to 'Show', item %></span></td>
         <td><span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span></td>
-        <td><span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
+        <td ><span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
       </tr>
     <% end %>
   </tbody>

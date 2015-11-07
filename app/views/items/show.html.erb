@@ -3,7 +3,7 @@
       
      <div id="container">
        <div id="myYield">
-
+<div id="tableSurround">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -22,8 +22,8 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @item.image %>
+
+    <%= link_to (image_tag @item.image, :style => "width:25%"), @item %>
 </p>
 
 <p>
@@ -31,8 +31,9 @@
   <%= @item.category %>
 </p>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<span class="mybtn" style="margin-right:10px;"><%= link_to 'Edit', edit_item_path(@item) %> </span>
+<span class="mybtn"><%= link_to 'Back', items_path %></span>
+</div>
       </div>
       </div>
       </div>

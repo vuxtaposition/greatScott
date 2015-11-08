@@ -10,6 +10,20 @@ h2 a{
 h2 a:hover{
 	color:#039;
 }
+.mainSignin{
+	float:right;
+	margin-right:2%;
+	margin-left:2%;
+	
+}
+.mainSignin a{
+	text-decoration:none;
+	color:#039;
+}
+.mainSignin a:hover{
+
+	color:black;
+}
 #myYield{
   width:80%;
   margin: 0 auto;
@@ -73,6 +87,14 @@ h2 a:hover{
 }
 .categoryListAll{
 	float: left;
+}
+.categoryListAll a{
+
+	color:#039;
+}
+.categoryListAll a:hover{
+
+	color:black;
 }
 .img_preview{
 	padding-top:10px;

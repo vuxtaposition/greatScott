@@ -18,4 +18,3 @@ $(document).ready(function(){
     $("#showMe").fadeOut('slow');
     });	
 });
-

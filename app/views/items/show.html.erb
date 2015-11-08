@@ -25,6 +25,7 @@
 
    <span id="showImageBig"> <%= link_to (image_tag @item.image, :style => "width:25%"), @item %></span>
       <div id="showMe"> <%= link_to (image_tag @item.image, :style => "width:105%"), @item %></div>
+       <a class="mybtn" href="/cart/<%= @item.id %>">Add to Cart</a>
 </p>
 
 <p>

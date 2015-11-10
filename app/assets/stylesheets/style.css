@@ -9,7 +9,7 @@ body{
 	width: 1000px;
     height: auto;
     margin: 0 auto;
-	background:white;
+
 }
 #header{
 	background:#191919;	
@@ -236,7 +236,7 @@ body{
 }
 #infoTwo {
 	width:94%;	
-	margin-left: %;
+	margin-left:0 %;
 }
 #infoThree {
 	width:94%;

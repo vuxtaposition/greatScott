@@ -20,6 +20,7 @@
    </div>
     </div><!-- end wrapper -->
     </section>
+    
        <!-- makes a nice line below header -->
 		<div id="borderHolder">                       
             <ul class="headerborder">
@@ -39,10 +40,12 @@
              <li><a href ="#">Products</a></li>
             <li><a href ="#">Contact</a></li>
         </ul>
+          <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 	</nav>
 	<div id="searchDiv">
-	<span class="cato">categories:</span><%= render '/items/categoryDistinctList' %>
-	
+	<span class="cato">Categories:</span><%= render '/items/categoryDistinctList' %>
+
 	<span class="mainSignin">
 	  <% if user_signed_in? %>
   Logged in as <strong style="color:brown"><%= current_user.email %></strong>.
@@ -60,9 +63,9 @@
   </div>
   
     </div><!-- end wrapper -->
-    
+       
     </section><!-- end header section -->
-    
+
     <%= yield %>
 
 <!-- footer -->
@@ -87,8 +90,11 @@
    </div>
     </div><!-- end wrapper -->
     </section><!-- end footer -->
-
-
+<script type="text/javascript">
+$( document ).ready(function() {
+$.backstretch("assets/trooper5.png");
+});
+</script>
 </body>
 
 </body>

@@ -16,6 +16,16 @@ h2 a:hover{
 	margin-left:2%;
 	
 }
+.notice{
+	text-align:right;
+	color:white;
+	margin-right:17px;
+}
+.alert{
+	text-align:right;
+	color:white;
+	margin-rigth:17px;
+}
 .mainSignin a{
 	text-decoration:none;
 	color:#039;
@@ -38,11 +48,21 @@ h2 a:hover{
 }
 #showMe{
 	display: none;
-	width: 35%;
-	margin-top: -250px;
-	margin-left: 180px;
+	width: 45%;
+	margin-top: -750px;
+	margin-left: 22%;
 	z-index: 99999;
 	position: absolute;
+}
+.posterImage{
+	margin-top:10px;
+}
+.headingTags{
+color: white;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+    text-shadow: 2px 2px 2px #485a67;
 }
 .cato{
 	float: left;
@@ -53,22 +73,29 @@ h2 a:hover{
 	background: #eee;
 	margin-top: 2px;
 	margin-right:5px;
+	padding-left: 5px;
+    padding-right: 5px;
 }
 .porductName{
 	padding:20px;
 	font-weight:bold;
-	font-size:20px;
+	font-size:40px;
 	text-shadow: 1px 1px 1px lightgray;
+	color:#191919;
 	
 }
 .mybtn{
-    width: 60px;
+    width: auto;
     height:30px;
-    background: #337ab7;
+    background: #485a67;
     padding: 5px;
     border-radius: 5px;
     color: white;
     text-decoration: none;
+    float:left;
+    margin:3px;
+    padding-left: 10px;
+    padding-right: 10px;
 
 }
 .mybtn a{
@@ -84,12 +111,42 @@ h2 a:hover{
 	padding:20px;
 	border-radius:20px;
 	box-shadow:2px 2px 4px gray;
+	float:left;
+}
+.theDis{
+	width: 90%;
+    padding: 10px;
+    height: 70px;
+    line-height:20px;
+	
+}
+.theDis2{
+	font-size:16px;
+    height: 70px;
+    float: left;
+    color:white;
+}
+.theCost{
+    float: left;
+    font-size: 22px;
+    height: 30px;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.moveMe{
+	font-size:22px;
+    height: 20px;
+    float: left;
+    width: 50px;
+    margin-right: 30px;
+    font-weight: bold;
 }
 .categoryListAll{
 	float: left;
 }
 .categoryListAll a{
-
+	text-decoration:none;
 	color:#039;
 }
 .categoryListAll a:hover{
@@ -103,7 +160,6 @@ h2 a:hover{
 	width: 1000px;
     height: auto;
     margin: 0 auto;
-	background:white;
 }
 #header{
 	background:#191919;	
@@ -121,7 +177,7 @@ h2 a:hover{
     height: auto;
     float: left;
 	padding-bottom:20px;
-	background:white;	
+	
 }
 #imgLeft{
 	width: 65%;
@@ -159,6 +215,26 @@ h2 a:hover{
 
 	
 }
+#itemSurround{
+	width: 46%;
+    background: cadetblue;
+    float: left;
+    padding: 5px;
+    text-align: center;
+    margin-left: 5px;
+    margin: 10px;
+    border-radius:10px;
+}
+#itemSurround2{
+	width: 90%;
+    background: cadetblue;
+    float: left;
+    padding: 5px;
+    text-align: center;
+    margin-left: 5px;
+    margin: 10px;
+    border-radius:10px;
+}
 .navbar ul li a{
 	width:100px;
 	text-decoration:none;
@@ -169,7 +245,7 @@ h2 a:hover{
     transition: background 2s;
 }
 .navbar ul li a:hover{
-	color:brown;
+	color:#ffb766;
 	height:33px;	
 	background:#191919;
 	opacity:0.8;
@@ -192,7 +268,7 @@ h2 a:hover{
 	font-size:12px;
 	color:white;
 	line-height:22px;
-	padding;5px;
+	padding:5px;
 }
 #outerFooter p{
 	font-size:18px;
@@ -215,20 +291,22 @@ h2 a:hover{
     margin: 0 auto;
 }
 #infoOne {
-    width: 29%;
+    width: 31%;
     position: relative;
     height:530px;
     border: 1px solid grey;
     padding: 5px;
-    margin-left: 3%;
     margin-top: 20px;
     float: left;
     text-align: center;
     border-radius: 3px;
     border: 1px solid #3575B9;
+}
+#infoOne a {
+	text-decoration:none;
 }
 #infoTwo {
-    width: 29%;
+    width: 31%;
     position: relative;
     height: 530px;
     border: 1px solid grey;
@@ -239,9 +317,12 @@ h2 a:hover{
     text-align: center;
     border-radius: 3px;
     border: 1px solid #3575B9;
+}
+#infoTwo a {
+	text-decoration:none;
 }
 #infoThree {
-    width: 29%;
+    width: 31%;
     position: relative;
     height: 530px;
     border: 1px solid grey;
@@ -253,7 +334,9 @@ h2 a:hover{
     border-radius: 3px;
     border: 1px solid #3575B9;
 }
-		
+#infoThree a {
+	text-decoration:none;
+}
 		/* css taken from a site to style small line across top of page*/
 		
 		#borderHolder {
@@ -339,9 +422,11 @@ h2 a:hover{
 	margin-left: 1%;
 	height:auto;
 }
+#itemSurround{
+	width:94%;
 }
 
-
+}
 
 
 
@@ -400,6 +485,9 @@ float:none;
 .navbar {
 	width: 100%;
 	display:none;
+}
+#itemSurround{
+	width:94%;
 }
 }
 
@@ -472,5 +560,8 @@ float:none;
 }
 #outerSlider{
 height:400px;	
+}
+#itemSurround{
+	width:90%;
 }
 }

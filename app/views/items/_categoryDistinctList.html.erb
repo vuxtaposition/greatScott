@@ -1,7 +1,7 @@
 <% @items = Item.select('DISTINCT category') %>
 <span class="categoryListAll">	
 <% @items.each do | c | %>
-	<a href="/category/<%= c.category %>" id="categorylisting"><%= c.category %></a>
+	<a href="/category/<%= c.category %>" id="categorylisting"><%= c.category %> | </a>
 
 <% end %>
 </span>

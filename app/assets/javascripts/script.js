@@ -10,11 +10,11 @@ $(document).ready(function(){
     });
 	
 		
-    $("#showImageBig").mouseover(function(){
-    $("#showMe").fadeIn('slow');
+    $(".theImage2").mouseover(function(){
+    $("#showMe").fadeIn(1500);
     });	
     
-    $("#showImageBig").mouseout(function(){
-    $("#showMe").fadeOut('slow');
+    $(".theImage2").mouseout(function(){
+    $("#showMe").fadeOut(1500);
     });	
 });

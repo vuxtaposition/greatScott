@@ -3,38 +3,34 @@
       
      <div id="container">
        <div id="myYield">
-<div id="tableSurround">
+<div id="tableSurround2">
+  <div id="itemSurround2">
 <p id="notice"><%= notice %></p>
 
-<p>
+ <div class="porductName">
   <strong>Name:</strong>
   <%= @item.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
+</div>
+ <div class="theDis">
+          <span class="theDis2"><strong>Description:</strong>
   <%= @item.description %>
-</p>
-
-<p>
-  <strong>Cost:</strong>
-  <%= @item.cost %>
-</p>
-
-<p>
-
-   <span id="showImageBig"> <%= link_to (image_tag @item.image, :style => "width:25%"), @item %></span>
+</span><br>
+        <span class="moveMe">
+  <strong>Cost:</strong></span> 
+        <span class="theCost"><%= @item.cost %></span>
+        </div>
+        <div class="theImage"><%= link_to (image_tag @item.image, :style => "width:70%", :class => 'theImage2'), @item %></div>
       <div id="showMe"> <%= link_to (image_tag @item.image, :style => "width:105%"), @item %></div>
-       <a class="mybtn" href="/cart/<%= @item.id %>">Add to Cart</a>
-</p>
+     <p>
+       <a class="mybtn" style="float:right;" href="/cart/<%= @item.id %>">Add to Cart</a>
 
-<p>
   <strong>Category:</strong>
   <%= @item.category %>
-</p>
+</p><br>
 
 <span class="mybtn" style="margin-right:10px;"><%= link_to 'Edit', edit_item_path(@item) %> </span>
 <span class="mybtn"><%= link_to 'Back', items_path %></span>
+</div>
 </div>
       </div>
       </div>

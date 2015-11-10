@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
-  
+  #resources :users, only: [:index, :show, :edit, :update]
+  get 'users/index'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/show'
+
+  get 'users/index'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/show'
+
   get 'users/index'
 
   get 'users/edit'

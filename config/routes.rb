@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   
   resources :items
     
-  get 'cart/index'
+  get 'cart/' => 'cart#index'
+  get 'cart/clear' => 'cart#clearCart'
+  get 'cart/:id' => 'cart#add'
+  
 
   get '/category/:id' => 'items#category'
   

@@ -5,10 +5,22 @@
             <div id="myYield">
 <h1>Cart#index</h1>
 <p>Find me in app/views/cart/index.html.erb</p>
-
+  
+    <% myItem = Item.find_by_id(params[:id]) %>
+      <%= myItem.name %>
+       <%= myItem.id %>
+  
+      <% @cart.each  do | id, quantity |%>
+       <% myItem = Item.find_by_id(id) %>
+  <ul>
+    <li><%= myItem.name %></li>
+    
+  </ul>
+  <% end %> 
 
 
 </div>
 </div>
 </div>
 </section>
+

@@ -1,0 +1,32 @@
+      <section id="content">
+        <div class="wrapper">
+      
+        <div id="container">
+            <div id="myYield">
+<h1>Your Cart</h1>
+
+  
+
+  <table class="cartTable" border="0">
+    <tr>
+      <th>Item</th>
+      <th>Image</th>
+      <th>Quantity</th>
+      <th>Cost</th>
+    </tr>
+  <% @cart.each  do | id, quantity |%>
+   <% myItem = Item.find_by_id(id) %>
+  <tr >
+    <td style="padding: 10px"><%= link_to (myItem.name), myItem %></td>
+    <td style="text-align:center;padding: 10px"><%= link_to (image_tag myItem.image, :style => "width:45%"), myItem %></td>
+    <td>€€€€</td>
+    <td style="padding: 10px"> <%= number_to_currency(myItem.cost, :unit => '€' ) %> </td>
+  </tr>
+  <% end %>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+

@@ -194,6 +194,21 @@ color: white;
 	padding-bottom:20px;
 	
 }
+.cartTable{
+	background:white;
+	
+}
+.cartTable tr:nth-child(2n+1) {
+ background:lightgray;
+}
+.cartTable tr td{
+	   border-collapse: collapse;
+}
+.cartTable a{
+	text-decoration:none;
+    font-size: 18px;
+    color: #474747;
+}
 #imgLeft{
 	width: 65%;
 	height:300px;

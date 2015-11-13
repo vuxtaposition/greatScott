@@ -4,6 +4,8 @@ class CartController < ApplicationController
       @cart = session[:cart]
     else
       @cart = {}
+        session[:cart]={}
+      @cart = session[:cart]
     end
   end
   

@@ -119,6 +119,76 @@ color: white;
 	width:98%;
 	border: 1px solid lightgray;
 }
+
+
+
+						/* CONTACT FORM */
+#form_wrapper{
+    width: 70%;
+    /* float: left; */
+    height: auto;
+    background: lightgray;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 60px;
+}
+#myForm{
+	font-size:20px;
+	}
+#myForm input[type=text]{
+	margin-top:10px;	
+	margin-bottom:10px;
+	border-radius:5px;
+	height:25px;
+	width:60%;
+	box-shadow: 3px 3px 9px 1px lightgray inset;
+}
+#myForm input[type=email]{
+	margin-left:42px;
+	margin-top:10px;	
+	margin-bottom:10px;
+	border-radius:5px;
+	height:25px;
+	width:60%;
+	box-shadow: 3px 3px 9px 1px lightgray inset;
+}
+#submit{
+    background: #337ab7;
+    width: 120px;
+    height: 30px;
+    float: left;
+    border: none;
+    border-radius: 5px;
+	}
+	#fnameField{
+	width: 50%;
+    height: 20px;
+	color:red;
+	font-size:12px;
+	display:none;
+	padding:3px;
+}
+	#lnameField2{
+	width: 50%;
+    height: 20px;
+	color:red;
+	font-size:12px;
+	display:none;
+	padding:3px;
+}
+
+	#emailField3{
+	width: 50%;
+    height: 20px;
+	color:red;
+	font-size:12px;
+	display:none;
+	padding:3px;
+}
+
+
+					/* END CONTACT */
 .theDis{
 	width: 90%;
     padding: 10px;

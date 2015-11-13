@@ -1,59 +1,9 @@
-Rails.application.routes.draw do
-  #resources :users, only: [:index, :show, :edit, :update]
-  get 'users/index'
+Rails.application.routes.draw do  
 
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/show'
-
-  get 'users/index'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/show'
-
-  get 'users/index'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/show'
-
-  get 'users/index'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/show'
-
-  get 'user/index'
-
-  get 'user/edit'
-
-  get 'user/update'
-
-  get 'user/show'
-
-  #resources :users, only: [:index, :show, :edit, :update]
-  
-  resources :items
-  
   devise_for :users
   
-  get 'users/index'
-
-  get 'users/edit'
-
-  get 'users/update'
-
-  get 'users/show'
-
+  resources :items
+    
   get 'cart/index'
 
   get '/category/:id' => 'items#category'

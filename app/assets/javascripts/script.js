@@ -10,11 +10,14 @@ $(document).ready(function(){
     });
 	
 		
-    $(".theImage2").mouseover(function(){
+		
+		//create a hover over images to display a bigger image. Alright in 1990 maybe!!!!
+		
+   /* $(".theImage2").mouseover(function(){
     $("#showMe").fadeIn(1500);
     });	
     
     $(".theImage2").mouseout(function(){
     $("#showMe").fadeOut(1500);
-    });	
+    });	*/
 });

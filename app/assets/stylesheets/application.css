@@ -122,14 +122,13 @@ color: white;
 .theDis{
 	width: 90%;
     padding: 10px;
-    height: 70px;
+    height: 140px;
     line-height:20px;
 	
 }
 .theDis2{
 	font-size:16px;
     height: 100px;
-    float: left;
     color:white;
  
 }
@@ -231,6 +230,10 @@ color: white;
 
 	
 }
+#tableSurround2{
+	width: 100%;
+    float: left;
+}
 #itemSurround{
 	width: 30%;
     background: cadetblue;
@@ -242,14 +245,18 @@ color: white;
     border-radius:10px;
 }
 #itemSurround2{
-	width: 90%;
-    background: cadetblue;
-    float: left;
+	width: 70%;
     padding: 5px;
     text-align: center;
     margin-left: 5px;
     margin: 10px;
     border-radius:10px;
+    margin:0 auto;
+    padding-bottom:60px;
+	background: #FFF;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#5F9EA0),color-stop(100%,#0B393B));
+    background: -webkit-linear-gradient(top,#5F9EA0 0%,#0B393B 100%);
+
 }
 .navbar ul li a{
 	width:100px;
@@ -286,6 +293,7 @@ color: white;
 	line-height:22px;
 	padding:5px;
 }
+
 #outerFooter p{
 	font-size:18px;
 	color:white;
@@ -315,7 +323,7 @@ color: white;
     margin-top: 20px;
     float: left;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 #infoOne a {
 	text-decoration:none;
@@ -330,7 +338,7 @@ color: white;
     margin-top: 20px;
     float: left;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 #infoTwo a {
 	text-decoration:none;
@@ -345,7 +353,7 @@ color: white;
     margin-top: 20px;
     float: left;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 #infoThree a {
 	text-decoration:none;

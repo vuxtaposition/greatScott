@@ -33,10 +33,10 @@ class CartController < ApplicationController
 
   def remove
     id = params[:id]
-    cart = session[:cart]
-    cart.delete id
+    $cart = session[:cart]
+    $cart.delete id
          
-    redirect_to :action => :index
+    #redirect_to :action => :add
   end
 
   def clearCart

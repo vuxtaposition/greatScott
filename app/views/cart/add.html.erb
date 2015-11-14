@@ -13,7 +13,7 @@
       <th>Image</th>
       <th>Quantity</th>
       <th>Cost</th>
-   
+      <th>Remove</th>
     </tr>
   <% $cart.each  do | id, quantity |%>
    <% myItem = Item.find_by_id(id) %>
@@ -22,7 +22,10 @@
     <td style="text-align:center;padding: 10px"><%= link_to (image_tag myItem.image, :style => "width:45%"), myItem %></td>
     <td>€€€€</td>
     <td style="padding: 10px"> <%= number_to_currency(myItem.cost, :unit => '€' ) %> </td>
-   
+    <td style="width:50px;">
+       <a style="float:right;" href="/cart/remove/<%= myItem.id %>"><%= image_tag("remove.png", :alt => "remove item", :style => "width:70%;") %></a>
+       
+       </td>
   </tr>
   <% end %>
 </table>

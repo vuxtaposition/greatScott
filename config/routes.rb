@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'cart/' => 'cart#index'
   get 'cart/clear' => 'cart#clearCart'
   get 'cart/:id' => 'cart#add'
-   get 'cart/remove' => 'cart#remove'
+  get 'cart/remove/:id' => 'cart#remove'
   
 
   get '/category/:id' => 'items#category'

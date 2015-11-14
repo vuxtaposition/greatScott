@@ -1,2 +1,14 @@
 	<!-- number of items in the cart -->
-     <span class="countCartItems"><%= $cart.count %></span> 
+     <span class="countCartItems">
+       <% if session[:cart] then %>
+      
+       <%= $cart.count %>
+       <% else %>
+       
+        <% $cart = {} %>
+       <%  session[:cart]={}  %>
+      <% $cart = session[:cart]  %>
+       <%= $cart.count %>
+       <% end %>
+       
+       </span> 

@@ -8,12 +8,17 @@
         
         <h2>Contact Us</h2>
         
-        Firstname: <input id="fname" type="text" name="firstname" value=""><span id="fnameField">This firstname field cannot be empty!</span><br>
+        Firstname: <br><input id="fname" type="text" name="firstname" value="" onFocus="clearMe()"><span id="fnameField">This firstname field cannot be empty!</span><br>
       
-        Surename: <input id="lname" type="text" name="lastname" value=""><span id="lnameField2">This lastname field cannot be empty!</span><br>
+        Surename: <br><input id="lname" type="text" name="lastname" value="" onFocus="clearMe()" ><span id="lnameField2">This lastname field cannot be empty!</span><br>
         
-        Email: <input id="email" type="email" name="email" value=""><span id="emailField3">This email field cannot be empty!</span><br>
+        Email: <br><input id="email" type="email" name="email" value="" onFocus="clearMe()" ><span id="emailField3">This email field cannot be empty!</span><br>
     
+       <br>
+       <h5 >Please enter you message here. <strong class="contactText" onFocus="clearMe()" >Message bust be less than 140 characters!</strong></h5>
+       
+       <textarea rows="4" width:="70%" name="comment" id="comment" onFocus="clearMe()"></textarea><span id="textareaNotice">You either have too many chataters, or you have none in your message.<br>Please review your text!</span><br>
+       
         <h5>Would you like to recieve a news letter?</h5>
     
         <input type="radio" name="group1" value="Yes"> Yes<br>
@@ -31,4 +36,10 @@
 </div>
 </div>
 </div>
+
 </section>
+<script type="text/javascript">
+$( document ).ready(function() {
+$.backstretch("assets/trooper5.png");
+});
+</script>

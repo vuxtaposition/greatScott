@@ -11,6 +11,7 @@
 	var myMail = document.getElementById("email").value;
 	var myFname = document.getElementById("fname").value;
 	var myLname = document.getElementById("lname").value;
+	var myText = document.getElementById("comment").value;
 
   	//check first name last and email 
   	if( myFname == ""){
@@ -32,7 +33,12 @@
   		  alert("Your fields can not be empty !");
   		   //display pre-made paragraph
   		  document.getElementById("emailField3").style.display = "block"; 
+  		  return false;
   		
+  	}else if (myText.length == "" || myText.length > 140 ){
+  		
+  		//alert("You have too many characters in you message. You should reduct them.");
+  		  document.getElementById("textareaNotice").style.display = "block"; 
   	}
   		
   	else{
@@ -50,6 +56,11 @@
 	}
 
 
-
+function clearMe(){
+	 document.getElementById("textareaNotice").style.display = "none"; 
+	 document.getElementById("emailField3").style.display = "none";
+	 document.getElementById("fnameField").style.display = "none";
+	 document.getElementById("lnameField2").style.display = "none"; 
+}
 
 

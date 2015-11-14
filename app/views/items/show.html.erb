@@ -31,6 +31,10 @@
       
       <% if user_signed_in? %>
     <a class="mybtn" style="float:right;" href="/cart/<%= @item.id %>">Add to Cart</a>
+    
+    <%else%>
+    <h3 style="color:white">You must be a member to purchase this item</h3>
+    
   <% end %>
       
 

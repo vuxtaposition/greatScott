@@ -16,11 +16,16 @@ h2 a:hover{
 	margin-left:2%;
 	
 }
+.contactText{
+	font-size:12px;
+	color:brown;
+}
+
 .countCartItems{
 	z-index: 999999;
     color: red;
     background: #eee;
-    border: 2px solid #191919;
+    border: 1px solid #191919;
     padding: 5px;
     border-radius: 5px;
     font-size: 15px;
@@ -99,10 +104,13 @@ color: white;
     padding: 20px;
     font-weight: bold;
     font-size: 22px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     text-shadow: 1px 1px 1px lightgray;
     color: #191919;
-    height: 0px;
+    height: 50px;
+    background: white;
+    border-radius: 10px;
+    border:1px solid gray;
 }
 .mybtn{
     width: auto;
@@ -160,16 +168,26 @@ color: white;
 	margin-bottom:10px;
 	border-radius:5px;
 	height:25px;
-	width:60%;
+	width:70%;
 	box-shadow: 3px 3px 9px 1px lightgray inset;
+	margin-left:14%;
+}
+textarea {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 70%;
+	height:200px;
+	margin-left:14%;
+	
 }
 #myForm input[type=email]{
-	margin-left:42px;
+	margin-left:14%;
 	margin-top:10px;	
 	margin-bottom:10px;
 	border-radius:5px;
 	height:25px;
-	width:60%;
+	width:70%;
 	box-shadow: 3px 3px 9px 1px lightgray inset;
 }
 #submit{
@@ -189,13 +207,22 @@ color: white;
 	padding:3px;
 }
 	#lnameField2{
-	width: 50%;
+	width: 80%;
     height: 20px;
 	color:red;
 	font-size:12px;
 	display:none;
 	padding:3px;
 }
+
+	#textareaNotice{
+	width: 50%;
+    height: 20px;
+	color:red;
+	font-size:12px;
+	display:none;
+	padding:3px;		
+	}
 
 	#emailField3{
 	width: 50%;

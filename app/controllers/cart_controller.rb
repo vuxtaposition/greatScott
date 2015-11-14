@@ -1,28 +1,31 @@
 class CartController < ApplicationController
+  
+ 
   def index
     if session[:cart] then
-      @cart = session[:cart]
+      $cart = session[:cart]
     else
-      @cart = {}
+      $cart = {}
         session[:cart]={}
-      @cart = session[:cart]
+      $cart = session[:cart]
     end
   end
   
   def add
+  
     id = params[:id]
     
     if session[:cart] then
-      @cart = session[:cart]
+      $cart = session[:cart]
     else
       session[:cart]={}
-      @cart = session[:cart]
+      $cart = session[:cart]
     end
     if 
-      @cart[id] then
-      @cart[id] = @cart[id] + 1
+      $cart[id] then
+      $cart[id] = $cart[id] + 1
     else
-      @cart[id] = 1
+      $cart[id] = 1
     end
         
     #redirect_to :action => :index

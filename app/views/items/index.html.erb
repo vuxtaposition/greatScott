@@ -1,36 +1,43 @@
-      <section id="content">
-        <div class="wrapper">
-      
-        <div id="container">
-            <div id="myYield">
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Items</h1>
-<div id="tableSurround">
-
-    <% @items.each do |item| %>
-     <div id="itemSurround">
-        <div class="porductName"><%= item.name %></div>
-        <div class="theDis">
-          <span class="theDis2"><%= item.description %></span><br>
-        <span class="moveMe">Cost:</span> 
-        <span class="theCost"><%= item.cost %></span>
-        </div>
-        <div class="theImage"><%= link_to (image_tag item.image, :style => "width:90%"), item %></div>
-        <span class="theCat"><%= item.category %></span>
-        <div class="theButtons">
-     <span class="mybtn"><%= link_to 'Show', item %></span>
-       <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
-       <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+   <section id="content">
+     <div class="wrapper">
+          
+         <div id="container">
+          <div id="myYield">
+          <p id="notice"><%= notice %></p>
+          
+          <h1>Listing Items</h1>
+          <div id="tableSurround">
+          
+              <% @items.each do |item| %>
+               <div id="itemSurround">
+                  <div class="porductName"><%= item.name %></div>
+                  
+                  <div class="theDis">
+                    <span class="theDis2"><%= item.description %></span><br>
+                    
+                  <span class="moveMe">Cost:</span> 
+                  
+                  <span class="theCost"><%= item.cost %></span>
+                  
+                  </div>
+                  <div class="theImage"><%= link_to (image_tag item.image, :style => "width:90%"), item %></div>
+                  
+                  <span class="theCat"><%= item.category %></span>
+                  
+                  <div class="theButtons">
+                    
+                 <span class="mybtn"><%= link_to 'Show', item %></span>
+                 <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
+                 <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                  </div>
+                </div>
+              <% end %>
+          
+          </div>
+        <br>
+        
+        <%= link_to 'New Item', new_item_path %>
         </div>
       </div>
-    <% end %>
-
-</div>
-<br>
-
-<%= link_to 'New Item', new_item_path %>
-</div>
-</div>
-</div>
-</section>
+    </div>
+  </section>

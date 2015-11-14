@@ -5,7 +5,7 @@
             <div id="myYield">
 <h1>Your Cart</h1>
 
-  
+  	Total products : <%= $cart.count %>
 
   <table class="cartTable" border="0">
     <tr>
@@ -14,7 +14,7 @@
       <th>Quantity</th>
       <th>Cost</th>
     </tr>
-  <% @cart.each  do | id, quantity |%>
+  <% $cart.each  do | id, quantity |%>
    <% myItem = Item.find_by_id(id) %>
   <tr >
     <td style="padding: 10px"><%= link_to (myItem.name), myItem %></td>

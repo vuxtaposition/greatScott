@@ -1,28 +1,38 @@
  <section id="content">
    <div class="wrapper">
-      
      <div id="container">
        <div id="myYield">
-<div id="tableSurround2">
-  <div id="itemSurround2">
-<p id="notice"><%= notice %></p>
+       <div id="tableSurround2">
+        <div id="itemSurround2">
+         <p id="notice"><%= notice %></p>
 
- <div class="porductName">
-  <strong>Name:</strong>
-  <%= @item.name %>
-</div>
- <div class="theDis">
-          <span class="theDis2"><strong>Description:</strong>
-  <%= @item.description %>
-</span><br>
-        <span class="moveMe">
-  <strong>Cost:</strong>
-        <span class="theCost"><%= number_to_currency(@item.cost, :unit => '€' ) %></span></span> 
-        </div>
-        <div class="theImage"><%= link_to (image_tag @item.image, :style => "width:70%", :class => 'theImage2'), @item %></div>
-      <div id="showMe"> <%= link_to (image_tag @item.image, :style => "width:105%"), @item %></div>
-     <p>
-       <a class="mybtn" style="float:right;" href="/cart/<%= @item.id %>">Add to Cart</a>
+               <div class="porductName">
+                <strong>Name:</strong>
+                  <%= @item.name %>
+               </div>
+           
+                <div class="theDis">
+                 <span class="theDis2"><strong>Description:</strong>
+                   <%= @item.description %>
+                     </span><br>
+                
+                  <span class="moveMe">
+                    <strong>Cost:</strong>
+                     <span class="theCost"><%= number_to_currency(@item.cost, :unit => '€' ) %></span></span> 
+                  </div>
+                  
+             <!-- hover over image to show in more detail. may not include it -->
+             <div class="theImage"><%= link_to (image_tag @item.image, :style => "width:70%", :class => 'theImage2'), @item %></div>
+           
+           <div id="showMe"> <%= link_to (image_tag @item.image, :style => "width:105%"), @item %></div>
+         <p>
+      
+      <!--show cart button only if user is logged in -->
+      
+      <% if user_signed_in? %>
+    <a class="mybtn" style="float:right;" href="/cart/<%= @item.id %>">Add to Cart</a>
+  <% end %>
+      
 
   <strong>Category:</strong>
   <%= @item.category %>

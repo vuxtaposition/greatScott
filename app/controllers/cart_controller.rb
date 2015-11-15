@@ -12,6 +12,8 @@ class CartController < ApplicationController
   end
   
   def add
+  @quantity = 1
+ @myArray ||= Array.new
   
     id = params[:id]
     
@@ -32,16 +34,20 @@ class CartController < ApplicationController
   end
 
   def remove
-    id = params[:id]
-    $cart = session[:cart]
-    $cart.delete id
-         
-    #redirect_to :action => :add
+      id = params[:id]
+      $cart = session[:cart]
+      $cart.delete id
+      @quantity = 1
+      @myArray ||= Array.new    
+      #redirect_to :action => :add
   end
 
   def clearCart
-    session[:cart] = nil
-    redirect_to :action => :index
+      @quantity = 1
+      @myArray ||= Array.new
+      
+      session[:cart] = nil
+      redirect_to :action => :index
   end
 
 end

@@ -12,6 +12,13 @@
 	var myFname = document.getElementById("fname").value;
 	var myLname = document.getElementById("lname").value;
 	var myText = document.getElementById("comment").value;
+  var myRadios = document.getElementsByName('newsletter');
+
+        for (var i = 0, length = myRadios.length; i < length; i++) {
+            if (myRadios[i].checked) {
+               var buttonChecked = myRadios[i].value;
+            }
+        }
 
   	//check first name last and email 
   	if( myFname == ""){
@@ -46,11 +53,12 @@
   		alert("Thank you !");
   	
   		//submit form and return a message
-    	var myMail = document.getElementById("email").value = "";
+    	document.getElementById("form_wrapper").innerHTML = "<h3>Thank You!</h3> Your mail has been sent.<br>We will respond as soon as we can.<br><span style='color:#485a67'>Below is your message that has been sent..</span><p><br><strong>Name:</strong> "+myFname+" "+myLname+"<br><strong>Email :</strong> "+myMail+"<br><strong>Query:</strong> "+myText+"<br><strong>Newsletter:</strong> "+buttonChecked+"</p> ";
+  
+  		var myMail = document.getElementById("email").value = "";
     	var myFname = document.getElementById("fname").value = "";
     	var myLname = document.getElementById("lname").value ="";
-    	document.getElementById("form_wrapper").innerHTML = "<h3>Thank You!</h3> Your mail has been sent.<br>We will respond as soon as we can.";
-  
+    	var myText = document.getElementById("lname").value ="";
   	}
 	
 	}

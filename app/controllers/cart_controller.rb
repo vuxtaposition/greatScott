@@ -13,7 +13,7 @@ class CartController < ApplicationController
   
   def add
   @quantity = 1
- @myArray ||= Array.new
+  @myArray ||= Array.new
   
     id = params[:id]
     

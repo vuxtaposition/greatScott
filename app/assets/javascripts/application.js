@@ -1,6 +1,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function(){
+	
+	//display menu button in mobile
+    $("#menuButton").click(function(){
+        $('.navbar').toggle();
+    });
+	
+     
+    $(".cartTable").hide(0).delay(100).fadeIn(1000);
+		
+		
+		
+		 $("#form_wrapper").hide(0).delay(100).fadeIn(2000);
+	 
+	
+});
 
 	
 	

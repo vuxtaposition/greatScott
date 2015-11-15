@@ -336,6 +336,7 @@ textarea {
 	text-decoration:none;
     font-size: 18px;
     color: #474747;
+    
 }
 #imgLeft{
 	width: 65%;
@@ -666,6 +667,8 @@ float:none;
 @media only screen and (max-width:479px) {
 .wrapper{
 	width: 100%;
+	height: 100px;
+    background: white;
 }
 #infoOne {
 	width:94%;	

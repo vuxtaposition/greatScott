@@ -27,8 +27,13 @@
                   <div class="theButtons">
                     
                  <span class="mybtn"><%= link_to 'Show', item %></span>
+                 
+                 
+                 <% if session[:login] == 1 %>
                  <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
                  <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                 <% end %> 
+                  
                   </div>
                 </div>
               <% end %>

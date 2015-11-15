@@ -42,12 +42,28 @@
                                 <%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
                                 
                                 <% else %>
+                                <% if user_signed_in? %>
                                 <span class="mybtn"><a href="/cart/<%= item.id %>">Add to Cart</a></span><br><br>
-                               
+                                 
+                                   <%else%>
+                                    <h3 style="color:#045">You must be a member to purchase this item</h3>
+                                 <% end %>
                 
                             <% end %>
                         </div>
                 
+                          
+    
+    
+  
+    
+
+                       
+                       
+                       
+                       
+                       
+                       
                         
                     </td>
                   </tr>

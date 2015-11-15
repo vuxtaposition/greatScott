@@ -8,8 +8,17 @@
 
   	 Total products : <%= $cart.count %> 
 
-      
+      <!-- loop through each item and add to an array to get the overall total   -->
+      <% $cart.each  do | id, quantity |%>
+         <% myItem = Item.find_by_id(id) %>
+           <% @myArray.push( myItem.cost) %>
+      <% end %>
    
+   <!-- check if array exists -->
+   <% if @myArray %>
+      <span class="goRight">The Grand Total: <span class="grandTotal"><%= number_to_currency(@myArray.sum, :unit => '€' )%></span></span>
+  
+   <% end %>
 
   <table class="cartTable" border="0">
     <tr>

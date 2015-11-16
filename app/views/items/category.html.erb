@@ -1,34 +1,54 @@
-      <section id="content">
-        <div class="wrapper">
-      
-        <div id="container">
-            <div id="myYield">
-
-<h1>Listing items (Category: <%= @category %>)</h1>
-<div id="tableSurround">
-
-    <% @items.each do |item| %>
-       <div id="itemSurround">
-        <div class="porductName"><%= item.name %></div>
-        <div class="theDis"> <span class="theDis2"><%= item.description %></span><br>
-        <span class="moveMe">Cost:</span> 
-        <span class="theCost"><%= item.cost %></span>
+   <section id="content">
+     <div class="wrapper">
+          
+         <div id="container">
+          <div id="myYield">
+          <p id="notice"><%= notice %></p>
+          
+          <h1>Listing Items</h1>
+          <div id="tableSurround">
+          
+              <% @items.each do |item| %>
+               <div id="itemSurround">
+                  <div class="porductName"><%= item.name %></div>
+                  
+                  <div >
+                    <span class="theDis2"><%= item.description %></span><br>
+                    
+                  <span class="moveMe">Cost:</span> 
+                  
+                  <span class="theCost"><%=  number_to_currency(item.cost, :unit => '€' ) %></span>
+                  
+                  </div>
+                  <div class="theImage"><%= link_to (image_tag item.image, :style => "width:90%"), item %></div>
+                  
+                 <strong>Category:</strong><span class="theCat"><%= item.category %></span>
+                  
+                  <div class="theButtons">
+                    
+                 <span class="mybtn"><%= link_to 'Show', item %></span>
+                 
+                 <!-- Only show if admin -->
+                 
+                 <% if session[:login] == 1 %>
+                 
+                      <% if user_signed_in? %>
+                      
+                      <% else %>
+                         <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
+                         <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                       <% end %>
+                 <% end %> 
+                  
+                  </div>
+                </div>
+              <% end %>
+          
+          </div>
+        <br>
+        
+        <%= link_to 'New Item', new_item_path %>
         </div>
-        <div class="theImage"><%= link_to (image_tag item.image, :style => "width:60%"), item %></div>
-        <span class="theCat"><%= item.category %></span>
-        <div class="theButtons">
-       <span class="mybtn"><%= link_to 'Show', item %></span></td>
-        <td><span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
-        <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-       </div>
       </div>
-    <% end %>
-
-</div>
-<br>
-
-<%= link_to 'New Item', new_item_path %>
-</div>
-</div>
-</div>
-</section>
+    </div>
+  </section>

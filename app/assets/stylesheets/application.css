@@ -254,10 +254,16 @@ textarea {
 	
 }
 .theDis2{
-	font-size:16px;
+    font-size: 16px;
     height: 100px;
-    color:white;
+    color: white;
+    float: left;
+    line-height: 26px;
  
+}
+.theCat{
+	font-weight: bold;
+    font-size: 18px;
 }
 .theCost{
     float: left;

@@ -12,26 +12,32 @@
                <div id="itemSurround">
                   <div class="porductName"><%= item.name %></div>
                   
-                  <div class="theDis">
+                  <div >
                     <span class="theDis2"><%= item.description %></span><br>
                     
                   <span class="moveMe">Cost:</span> 
                   
-                  <span class="theCost"><%= item.cost %></span>
+                  <span class="theCost"><%=  number_to_currency(item.cost, :unit => '€' ) %></span>
                   
                   </div>
                   <div class="theImage"><%= link_to (image_tag item.image, :style => "width:90%"), item %></div>
                   
-                  <span class="theCat"><%= item.category %></span>
+                 <strong>Category:</strong><span class="theCat"><%= item.category %></span>
                   
                   <div class="theButtons">
                     
                  <span class="mybtn"><%= link_to 'Show', item %></span>
                  
+                 <!-- Only show if admin -->
                  
                  <% if session[:login] == 1 %>
-                 <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
-                 <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                 
+                      <% if user_signed_in? %>
+                      
+                      <% else %>
+                         <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
+                         <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                       <% end %>
                  <% end %> 
                   
                   </div>

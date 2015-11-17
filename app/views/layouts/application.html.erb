@@ -52,7 +52,14 @@
 	  <% if user_signed_in? %>
 	  
 	  <!-- if logged in show cart image and edit profile -->
-	  
+	                     
+	                     
+	                     <!-- display administator image if admin is logged in -->
+	                     <% if current_user.email  == 'alan@mail.com' %>
+                              <img class="adminPic" src="/assets/admin.png" width="80px" alt="header pic" />
+                        <% end %>
+         
+         
           Logged in as <strong style="color:brown"><%= current_user.email %></strong>.
           
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
@@ -125,20 +132,24 @@
    
    <!-- javascript to get this year and next year -->
     <script type="text/javascript">
+    
       var d = new Date().getFullYear();
       var n = new Date().getFullYear()+1;
       document.write( d + " / " + n);
+      
       </script>
       
       
    <span class="goRight"> Higher Diploma in Web Technology</span>
+    
     <ul>
-    <li>Alan Leoanrd</li>
+      <li>Alan Leoanrd</li>
       <li>Edward Flynn</li>
     </ul>
+    
    </div>
-    </div><!-- end wrapper -->
-    </section><!-- end footer -->
+ </div><!-- end wrapper -->
+</section><!-- end footer -->
     
     
     <!-- backstreach -->

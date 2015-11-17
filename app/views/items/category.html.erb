@@ -5,6 +5,12 @@
           <div id="myYield">
           <p id="notice"><%= notice %></p>
           
+          <!-- if admin --> 
+          <p class="goRight">
+           <% if session[:login] == 3 %>
+        <%= link_to 'New Item', new_item_path %>
+        <% end %>
+        </p>
           <h1>Listing Items</h1>
           <div id="tableSurround">
           
@@ -30,13 +36,16 @@
                  
                  <!-- Only show if admin -->
                  
-                 <% if session[:login] == 1 %>
+                 
+                 <!-- check admin -->
+                 
+                 <% if session[:login] == 3 %>
                  
                       <% if user_signed_in? %>
-                      
-                      <% else %>
-                         <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
+                        <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
                          <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                      <% else %>
+                         
                        <% end %>
                  <% end %> 
                   
@@ -47,7 +56,6 @@
           </div>
         <br>
         
-        <%= link_to 'New Item', new_item_path %>
         </div>
       </div>
     </div>

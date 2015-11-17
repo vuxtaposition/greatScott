@@ -61,7 +61,7 @@
  </p><br>
 
 
-  <% if !session[:login] == 1 %>
+  <% if session[:login] == 3 %>
   
   <span class="mybtn" style="margin-right:10px;"><%= link_to 'Edit', edit_item_path(@item) %> </span>
 

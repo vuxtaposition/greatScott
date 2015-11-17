@@ -6,6 +6,16 @@
           <p id="notice"><%= notice %></p>
           
           <h1>Listing Items</h1>
+          
+          
+             <!-- if admin --> 
+          <p class="goRight">
+           <% if session[:login] == 3 %>
+          <%= link_to 'New Item', new_item_path %>
+          <% end %>
+          </p>
+        
+        
           <div id="tableSurround">
           
               <% @items.each do |item| %>
@@ -31,13 +41,15 @@
                  <!-- Only show if admin -->
                  
                  
-                 <% if session[:login] == 1 %>
+               <% if session[:login] == 3 %>
                  
                       <% if user_signed_in? %>
                       
-                      <% else %>
-                         <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
+                     
+                        <span class="mybtn"><%= link_to 'Edit', edit_item_path(item) %></span>
                          <span class="mybtn"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                      <% else %>
+                        
                        <% end %>
                  <% end %> 
                   
@@ -47,9 +59,7 @@
           
           </div>
         <br>
-         <% if session[:login] == 1 %>
-        <%= link_to 'New Item', new_item_path %>
-        <% end  %>
+     
         </div>
       </div>
     </div>

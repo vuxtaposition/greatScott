@@ -83,8 +83,27 @@
     </div><!-- end wrapper -->
        
     </section><!-- end header section -->
+    
+      
+      
+      <!-- setting the Admin session --> 
+      
+      <% if user_signed_in? %>
+      
+        <% if current_user.email  == 'alan@mail.com' %>
+            <% session[:login] = 3 %>
+        <% else %>
+            <% session[:login] = 0 %>
+        <% end %>
+        
+    <% end %>
+
+    <!-- end admin -->
+
 
     <%= yield %>
+
+
 
 <!-- footer -->
  <!-- makes a nice line across footer -->
@@ -97,12 +116,22 @@
         </div>
         
         
+        
     <section id="footer">
         <div class="wrapper">
       <div id="outerFooter">
       
-      <p>Copyright &copy; GreatScott!!
-    <script type="text/javascript">document.write(new Date().getFullYear());</script><br>
+      <p> GreatScott!!
+   
+   <!-- javascript to get this year and next year -->
+    <script type="text/javascript">
+      var d = new Date().getFullYear();
+      var n = new Date().getFullYear()+1;
+      document.write( d + " / " + n);
+      </script>
+      
+      
+   <span class="goRight"> Higher Diploma in Web Technology</span>
     <ul>
     <li>Alan Leoanrd</li>
       <li>Edward Flynn</li>
@@ -110,11 +139,16 @@
    </div>
     </div><!-- end wrapper -->
     </section><!-- end footer -->
-<script type="text/javascript">
-$( document ).ready(function() {
-$.backstretch("assets/trooper5.png");
-});
-</script>
+    
+    
+    <!-- backstreach -->
+    <script type="text/javascript">
+    $( document ).ready(function() {
+    $.backstretch("assets/trooper5.png");
+    });
+    </script>
+    
+    
 </body>
 
 </body>

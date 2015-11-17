@@ -18,7 +18,7 @@ h2 a:hover{
 }
 .contactText{
 	font-size:12px;
-	color:brown;
+	color:#337ab7;
 }
 
 .countCartItems{
@@ -167,6 +167,7 @@ color: white;
     margin-top: 30px;
     padding-bottom: 60px;
     opacity:0.8;
+    border-radius:10px;
 }
 #myForm{
 	font-size:20px;
@@ -178,7 +179,6 @@ color: white;
 	height:25px;
 	width:70%;
 	box-shadow: 3px 3px 9px 1px lightgray inset;
-	margin-left:14%;
 	font-size:16px;
 }
 textarea {
@@ -188,11 +188,13 @@ textarea {
 	width: 70%;
 	height:200px;
 	margin-left:14%;
+	border-radius:5px;
 	font-size:16px;
+    box-shadow: 3px 3px 9px 1px lightgray inset;
 	
 }
 #myForm input[type=email]{
-	margin-left:14%;
+	margin-left:6%;
 	margin-top:10px;	
 	margin-bottom:10px;
 	border-radius:5px;

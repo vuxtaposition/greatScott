@@ -263,30 +263,28 @@ textarea {
 }
 
 
+
+
+/*source for magnigy    http://thecodeplayer.com/walkthrough/magnifying-glass-for-images-using-jquery-and-css3 */
 .magnify {width: 200px; margin: 50px auto; position: relative;}
 
-/*Lets create the magnifying glass*/
-.large {
-	width: 175px; height: 175px;
-	position: absolute;
-	border-radius: 100%;
-	
-	/*Multiple box shadows to achieve the glass effect*/
-	box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
-	0 0 7px 7px rgba(0, 0, 0, 0.25), 
-	inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
-	
-	/*Lets load up the large image first*/
-	
-	
-	background: url('http://thecodeplayer.com/uploads/media/iphone.jpg') no-repeat;
-	
-	/*hide the glass by default*/
-	display: none;
-}
 
-/*To solve overlap bug at the edges during magnification*/
+.large {
+    width: 275px;
+    height: 275px;
+    position: absolute;
+    border-radius: 25%;
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+    display: none;
+}
 .small { display: block; }
+
+/* end magnigy */
+
+
+
+
+
 	
 .theCat{
 	font-weight: bold;
@@ -422,7 +420,7 @@ textarea {
     border-radius:10px;
 }
 #itemSurround2{
-	width: 70%;
+	width: 50%;
     padding: 5px;
     text-align: center;
     margin-left: 5px;
@@ -433,6 +431,8 @@ textarea {
 	background: #FFF;
     background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#5F9EA0),color-stop(100%,#0B393B));
     background: -webkit-linear-gradient(top,#5F9EA0 0%,#0B393B 100%);
+    background: -moz-gradient(linear,left top,left bottom,color-stop(0%,#5F9EA0),color-stop(100%,#0B393B));
+    background: -moz-linear-gradient(top,#5F9EA0 0%,#0B393B 100%);
 
 }
 .navbar ul li a{

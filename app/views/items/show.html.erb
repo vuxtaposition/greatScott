@@ -21,12 +21,30 @@
                      <span class="theCost"><%= number_to_currency(@item.cost, :unit => '€' ) %></span></span> 
                   </div>
                   
-             <!-- hover over image to show in more detail. may not include it -->
-             <div class="theImage"><%= link_to (image_tag @item.image, :style => "width:70%", :class => 'theImage2'), @item %></div>
-           
-           <div id="showMe"> <%= link_to (image_tag @item.image, :style => "width:105%"), @item %></div>
+                 <!-- hover over image to show in more detail. may not include it -->
+                 <div class="theImage">
+                  
+                 <!-- <%= link_to (image_tag @item.image, :style => "width:70%", :class => 'theImage2'), @item %> -->
+                  
+                  
+                  </div>
+             
+             <!-- magnify source:  http://thecodeplayer.com/walkthrough/magnifying-glass-for-images-using-jquery-and-css3 -->
+             <div class="magnify"> 
+               
+               <!-- creating style on the fly in rails to display the larger image -->
+               <style media="screen">
+                .large { background-image: url('/assets/<%= @item.image %>');background-repeat: no-repeat;width:300px; }
+                 </style>
+              
+               <div class="large" ></div>
+               <%= link_to (image_tag @item.image, :style => "width:100%",:class => "small"), @item %>
+             </div>
          <p>
       
+    
+    
+    
       <!--show cart button only if user is logged in -->
       
       <% if user_signed_in? %>
@@ -40,12 +58,16 @@
 
   <strong>Category:</strong>
   <%= @item.category %>
-</p><br>
+ </p><br>
 
 
- 
-<span class="mybtn" style="margin-right:10px;"><%= link_to 'Edit', edit_item_path(@item) %> </span>
-<span class="mybtn"><%= link_to 'Back', items_path %></span>
+  <% if session[:login] == 1 %>
+  
+  <span class="mybtn" style="margin-right:10px;"><%= link_to 'Edit', edit_item_path(@item) %> </span>
+
+  <% end %>
+  
+  <span class="mybtn"><%= link_to 'Back', items_path %></span>
 
 
 

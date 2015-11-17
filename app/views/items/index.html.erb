@@ -30,6 +30,7 @@
                  
                  <!-- Only show if admin -->
                  
+                 
                  <% if session[:login] == 1 %>
                  
                       <% if user_signed_in? %>
@@ -46,8 +47,9 @@
           
           </div>
         <br>
-        
+         <% if session[:login] == 1 %>
         <%= link_to 'New Item', new_item_path %>
+        <% end  %>
         </div>
       </div>
     </div>

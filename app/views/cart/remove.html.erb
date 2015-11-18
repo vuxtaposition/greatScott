@@ -7,16 +7,25 @@
 <h1>Your Cart</h1>
 
   	 Total products : <%= $cart.count %> 
-  	 
 <!-- loop through each item and add to an array to get the overall total   -->
       <% $cart.each  do | id, quantity |%>
          <% myItem = Item.find_by_id(id) %>
            <% @myArray.push( myItem.cost) %>
       <% end %>
    
-      <span class="goRight">The Grand Total: <span class="grandTotal"><%= number_to_currency(@myArray.sum, :unit => '€' )%></span></span>
+   
+      <!-- total cart display-->
+      <span class="goRight" style="padding: 10px;background: white">
+        Sub Total: <span class="goRight"><%= number_to_currency(@myArray.sum, :unit => '€' )%></span><br>
+        <span class="goRight">Vat @ 21%</span><br>
+        Grand Total: <span Class="grandTotal"><%= number_to_currency(@myArray.sum * 21/100 + @myArray.sum , :unit => '€' )%></span>
+        <br>
+        <br>
+         <a class="mybtn" style="float:left;" href="/mis">Checkout</a><br>
+
+        </span>
   
-  <table class="cartTable" border="0">
+  <table class="cartTable" border="0" style="marign: 0 auto" class="cartTable" >
     <tr>
       <th>Item</th>
       <th>Image</th>

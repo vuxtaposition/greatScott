@@ -16,10 +16,7 @@ class ItemsController < ApplicationController
      @search_term = params[:q]
      st = "%#{params[:q]}%"
      @items = Item.where("name like ? or description like ?", st, st)
-     
-     
-
-  end
+    end
   
 
   # GET /items/1

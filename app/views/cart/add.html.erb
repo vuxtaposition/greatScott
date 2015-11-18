@@ -12,8 +12,19 @@
          <% myItem = Item.find_by_id(id) %>
            <% @myArray.push( myItem.cost) %>
       <% end %>
-   
-      <span class="goRight">The Grand Total: <span class="grandTotal"><%= number_to_currency(@myArray.sum, :unit => '€' )%></span></span>
+      
+      
+   <!-- total cart display-->
+       <span class="goRight" style="padding: 10px;background: white">
+        Sub Total: <span class="goRight"><%= number_to_currency(@myArray.sum, :unit => '€' )%></span><br>
+        <span class="goRight">Vat @ 21%</span><br>
+        <% grandtotal =  @myArray.sum * 21/100 + @myArray.sum %>
+        Grand Total: <span Class="grandTotal"><%= number_to_currency(@myArray.sum * 21/100 + @myArray.sum , :unit => '€' )%></span>
+        <br>
+        <br>
+         <a class="mybtn" style="float:left;" href="/mis?amount=<%= grandtotal %>">Checkout</a><br>
+        
+        </span>
   
   <table class="cartTable" border="0" style="marign: 0 auto" class="cartTable" >
     <tr>
@@ -45,7 +56,8 @@
 
       
       
-     <a class="mybtn" style="float:right;" href="/cart/clear">Clear Cart</a>
+     <a class="mybtn" style="float:right;" href="/cart/clear">Clear Cart</a><br>
+     
     </div>
     </div>
   </div>

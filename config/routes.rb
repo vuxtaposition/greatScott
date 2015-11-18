@@ -22,14 +22,14 @@ Rails.application.routes.draw do
 
   get '/contact' => 'static_pages#contact'
 
-  get 'static_pages/mis'
+  get '/mis' => 'static_pages#mis'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#index#index'
+  root 'static_pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

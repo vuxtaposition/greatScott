@@ -9,5 +9,8 @@ class StaticPagesController < ApplicationController
   end
 
   def mis
+    
+   @myamount =  params[:amount]
+    
   end
 end

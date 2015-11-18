@@ -175,6 +175,31 @@ color: white;
     opacity:0.8;
     border-radius:10px;
 }
+#myCreditCardDetails{
+	font-size:20px;	
+	
+}
+#myCreditCardDetails input[type=text]{
+	margin-top:10px;	
+	margin-bottom:10px;
+	border-radius:5px;
+	height:25px;
+	width:70%;
+	box-shadow: 3px 3px 9px 1px lightgray inset;
+	font-size:16px;
+}
+#myCreditCardDetails input[type=email]{
+	margin-left:6%;
+	margin-top:10px;	
+	margin-bottom:10px;
+	border-radius:5px;
+	height:25px;
+	width:70%;
+	font-size:16px;
+	box-shadow: 3px 3px 9px 1px lightgray inset;
+}
+
+
 #myForm{
 	font-size:20px;
 	}

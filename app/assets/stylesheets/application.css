@@ -125,6 +125,21 @@ color: white;
     border-radius: 10px;
     border:1px solid gray;
 }
+
+.mybtn2{
+    width: auto;
+    height:30px;
+    background: #ff9f33;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    float:left;
+    margin:3px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
 .mybtn{
     width: auto;
     height:30px;

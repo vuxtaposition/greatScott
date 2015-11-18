@@ -41,7 +41,7 @@
       <th>Cost</th>
       <th>Remove</th>
      
-    </tr>
+    </tr><!-- display the cart -->
       <% $cart.each  do | id, quantity |%>
       <% myItem = Item.find_by_id(id) %>
        <tr >
@@ -62,7 +62,7 @@
 </table>
 
 
-     <a class="mybtn" style="float:right;" href="/cart/clear">Clear Cart</a>
+     <a class="mybtn2" style="float:right;" href="/cart/clear">Clear Cart</a>
     </div>
     </div>
   </div>

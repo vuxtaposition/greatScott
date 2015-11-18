@@ -16,13 +16,19 @@
       
    <!-- total cart display-->
        <span class="goRight" style="padding: 10px;background: white">
-        Sub Total: <span class="goRight"><%= number_to_currency(@myArray.sum, :unit => '€' )%></span><br>
-        <span class="goRight">Vat @ 21%</span><br>
-        <% grandtotal =  @myArray.sum * 21/100 + @myArray.sum %>
-        Grand Total: <span Class="grandTotal"><%= number_to_currency(@myArray.sum * 21/100 + @myArray.sum , :unit => '€' )%></span>
-        <br>
-        <br>
-         <a class="mybtn" style="float:left;" href="/mis?amount=<%= grandtotal %>">Checkout</a><br>
+            Sub Total: <span class="goRight"><%= number_to_currency(@myArray.sum, :unit => '€' )%></span><br>
+            
+            <!-- total cart display-->
+            <span class="goRight"><i>Vat</i> @ 21%</span><br>
+            
+            <!-- create a variable to send to payment -->
+            <% grandtotal =  @myArray.sum * 21/100 + @myArray.sum %>
+           
+            <strong>Grand Total:</strong> <span Class="grandTotal"><%= number_to_currency(@myArray.sum * 21/100 + @myArray.sum , :unit => '€' )%></span>
+            <br>
+            <br>
+            <!-- append variable to payment link -->
+             <a class="mybtn" style="float:left;" href="/mis?amount=<%= grandtotal %>">Checkout</a><br>
         
         </span>
   
@@ -34,7 +40,7 @@
       <th>Cost</th>
       <th>Remove</th>
      
-    </tr>
+    </tr><!-- display the cart -->
       <% $cart.each  do | id, quantity |%>
       <% myItem = Item.find_by_id(id) %>
        <tr >
@@ -56,7 +62,7 @@
 
       
       
-     <a class="mybtn" style="float:right;" href="/cart/clear">Clear Cart</a><br>
+     <a class="mybtn2" style="float:right;" href="/cart/clear">Clear Cart</a><br>
      
     </div>
     </div>

@@ -3,9 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def about
-   
-    @users = User.all
-    @orders = Order.all
+
   
     
   end
@@ -14,9 +12,13 @@ class StaticPagesController < ApplicationController
    
     @users = User.all
     @orders = Order.all
-  
     
-  end
+      
+        if current_user.email  != 'alan@mail.com'
+         redirect_to root_path
+        end
+     
+    end
 
   def contact
   end

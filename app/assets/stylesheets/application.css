@@ -134,7 +134,7 @@ color: white;
     text-shadow: 1px 1px 1px lightgray;
     color: #191919;
     height: 50px;
-    background: white;
+    background: #eee;
     border-radius: 10px;
     border:1px solid gray;
 }
@@ -472,7 +472,7 @@ textarea {
 }
 #itemSurround{
 	width: 30%;
-    background: cadetblue;
+    background: darkgray;
     float: left;
     padding: 5px;
     text-align: center;

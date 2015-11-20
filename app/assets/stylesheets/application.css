@@ -479,6 +479,8 @@ textarea {
     margin-left: 5px;
     margin: 10px;
     border-radius:10px;
+	padding-bottom: 16px;
+    padding-top: 16px;
 }
 #itemSurround2{
 	width: 50%;

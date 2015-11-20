@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  #restrice access to admin page
+   before_filter :authenticate_user!, except: [:index,:about,:contact,:mis]
   def index
   end
 
@@ -9,10 +11,10 @@ class StaticPagesController < ApplicationController
   end
   
     def admin
-   
+  
     @users = User.all
     @orders = Order.all
-   
+
     # restrict admin page even if user types it into the url
     if current_user.email
         if current_user.email  != 'alan@mail.com'
@@ -20,6 +22,7 @@ class StaticPagesController < ApplicationController
        else
          
         end
+     
     end
     end
    

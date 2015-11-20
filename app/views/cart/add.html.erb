@@ -42,22 +42,27 @@
      
     </tr><!-- display the cart -->
       <% $cart.each  do | id, quantity |%>
-      <% myItem = Item.find_by_id(id) %>
+      <% @myItem = Item.find_by_id(id) %>
        <tr >
-      <td style="padding: 10px"><%= link_to (myItem.name), myItem %></td>
-      <td style="text-align:center;padding: 10px"><%= link_to (image_tag myItem.image, :style => "width:45%"), myItem %></td>
+      <td style="padding: 10px"><%= link_to (@myItem.name), @myItem %></td>
+      <td style="text-align:center;padding: 10px"><%= link_to (image_tag @myItem.image, :style => "width:45%"), @myItem %></td>
       <td style="text-align:center;">1</td>
-      <td style="padding: 10px"> <%= number_to_currency(myItem.cost, :unit => '€' ) %> </td>
+      <td style="padding: 10px"> <%= number_to_currency(@myItem.cost, :unit => '€' ) %> </td>
       <td style="width:50px;">
-         <a style="float:right;" href="/cart/remove/<%= myItem.id %>"><%= image_tag("remove.png", :alt => "remove item", :style => "width:70%;") %></a>
+         <a style="float:right;" href="/cart/remove/<%= @myItem.id %>"><%= image_tag("remove.png", :alt => "remove item", :style => "width:70%;") %></a>
         
          </td>
-       
+    
   </tr>
   <% end %>
+  <!-- keeping track of the orders -->
+     <%   order = Order.new() %>
+      <%  order.item = @myItem.name%>
+       <%  order.cost = @myItem.cost %>
+        <%  order.email = current_user.email %>
+       <% order.save %>
   
-  
-    
+   
 </table>
 
       

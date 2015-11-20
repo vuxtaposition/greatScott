@@ -34,9 +34,12 @@ class CartController < ApplicationController
   end
 
   def remove
+   
       id = params[:id]
       $cart = session[:cart]
       $cart.delete id
+ 
+      
       @quantity = 1
       @myArray ||= Array.new    
       #redirect_to :action => :add

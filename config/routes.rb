@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get 'static_pages/index'
 
   get '/about'  => 'static_pages#about'
+  
+  get '/admin'  => 'static_pages#admin'
 
   get '/contact' => 'static_pages#contact'
 

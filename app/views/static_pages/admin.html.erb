@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <div id="container">
+      <div id="myYield">
+        <h1>Admin Section</h1>
+
+      
+        
+        <table class="admin1">
+          <tr><td>
+            <h3>Users</h3>
+         <% @users.each do |user| %>
+         <%= user.email %><br>
+         <% end %>
+         </td>
+         <td>
+           <h3>Orders</h3> 
+                <table class="admin2">
+              <tr><th align="left">OrderId</th><th align="left">Item</th><th align="left">Cost</th><th align="left">Customer</th></tr>
+            <% @orders.each do |order| %>
+         <tr>
+         <td><%= order.id %> </td>
+        <td> <%= order.item %>  </td>
+         <td><%= number_to_currency(order.cost, :unit => '€' ) %> </td> 
+         <td align="left"><%= order.email %></td>
+         </tr>
+       
+         <% end %>
+           </table>
+         </td>
+         </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+
+  $( document ).ready(function() {
+  $.backstretch("assets/trooper5.png");
+  });
+
+  </script>

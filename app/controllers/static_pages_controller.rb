@@ -14,6 +14,7 @@ class StaticPagesController < ApplicationController
   
     @users = User.all
     @orders = Order.all
+  
 
     # restrict admin page even if user types it into the url
     if current_user.email

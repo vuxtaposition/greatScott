@@ -13,7 +13,7 @@
          <% end %>
          </td>
          <td>
-           <h3>Orders</h3> 
+           <h3>Orders</h3>
                 <table class="admin2">
               <tr><th align="left">OrderId</th><th align="left">Item</th><th align="left">Cost</th><th align="left">Customer</th></tr>
             <% @orders.each do |order| %>
@@ -22,6 +22,7 @@
         <td> <%= order.item %>  </td>
          <td><%= number_to_currency(order.cost, :unit => '€' ) %> </td> 
          <td align="left"><%= order.email %></td>
+           <td align="left"><%= order.created_at.strftime("%d %B. %Y") %></td>
          </tr>
        
          <% end %>

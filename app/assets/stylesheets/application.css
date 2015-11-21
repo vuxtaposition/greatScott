@@ -10,6 +10,19 @@ body{
     margin-left: 140px;
     margin-top: -2px;
 }
+.editMe{
+	
+    margin-top: 50px;
+    background: white;
+    padding: 5px;
+    color: #474747;
+    text-shadow: none;
+    padding-bottom: 40px;
+    font-size: 14px;
+    float: left;
+    width: 100%;
+
+}
 h2 a{
 	color:#A1805B;
 	font-size:33px;

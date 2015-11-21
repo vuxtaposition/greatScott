@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-
+ @orders = Order.all
   end
 
   # # PATCH/PUT /users/1

@@ -3,7 +3,7 @@
       
      <div id="container">
        <div id="myYield">
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>Account Details <%= current_user.email %></h2>
 <div class="signIn">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -36,9 +36,40 @@
     <%= f.submit "Update" %>
   </div>
 <% end %>
+<div class="editMe">
+<h3><br>Your orders</h3>
+  <% @myOrder = Order.all %>
 
-<h3>Cancel my account</h3>
-
+   <table width="100%">
+     <tr>
+       <th>Cost</th>
+       <th>Item</th>
+       <th>Email</th>
+       <th>Date</th>
+     </tr>
+     
+   <!-- display all orders from current user -->
+   <% @myOrder.each do |g| %>
+   
+  <!-- create a variable to hold current user -->
+     <%  x = current_user.email %>
+     
+       <% if g.email == x %>
+    
+        <tr>
+         <td> <%=  number_to_currency(g.cost, :unit => '€' )  %></td>
+         <td> <%= g.item %></td>
+         <td> <%= g.email %></td>
+         <td> <%= g.created_at.strftime("%d %B. %Y") %></td> 
+         <br>
+      
+        </tr>
+      <% end %>
+    <% end %>
+    
+    </table>
+    
+    </div>
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>

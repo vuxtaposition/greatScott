@@ -11,7 +11,8 @@ body{
     margin-top: -2px;
 }
 h2 a{
-	color:#191919;
+	color:#A1805B;
+	font-size:33px;
 }
 h2 a:hover{
 	color:#039;
@@ -25,6 +26,26 @@ h2 a:hover{
 .contactText{
 	font-size:12px;
 	color:#337ab7;
+}
+.signIn{
+  width: 57%;
+    color: white;
+    background: lightgray;
+    padding: 30px;
+    margin: 0 auto;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+    background-image: url(/assets/shaw.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-shadow: 2px 2px 2px black;
+    font-family: helvetica;
+    opacity: 0.8;
+
+}
+.signIn a{
+	color:white;
+	text-decoration:none;
 }
 
 .countCartItems{
@@ -380,15 +401,22 @@ textarea {
 }
 .img_preview{
 	padding-top:10px;
+		opacity:0.8;
 }
 .img_preview:hover{
+	opacity:0.5;
+}
+.posterImage2{
 	opacity:0.8;
 }
 .posterImage2:hover{
-	opacity:0.8;
+	opacity:0.5;
+}
+.posterImage{
+		opacity:0.8;
 }
 .posterImage:hover{
-		opacity:0.8
+		opacity:0.5;
 }
 .wrapper{
 	width: 1000px;
@@ -430,10 +458,12 @@ textarea {
     color: #474747;
     
 }
+.headImage{
+	opacity: 0.8;margin-left: 30px;
+}
 #imgLeft{
 	width: 65%;
 	height:300px;
-	background:#337ab7;
 	float:left;	
 }
 #rightText{

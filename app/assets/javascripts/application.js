@@ -15,7 +15,27 @@ $(document).ready(function(){
 		
 		 $("#form_wrapper").hide(0).delay(100).fadeIn(2000);
 	 
+	// animate basket
+	$( '.cartTable a img' ).click(function() {
+		  $( ".countCartItems" ).slideToggle();
+	});
 	
+	
+	//show hide order details on Account page
+	$( '.mybtn3' ).click(function() {
+		  $( ".editMe" ).slideDown();
+		   $( '.mybtn4' ).show();
+		    $( '.mybtn3' ).hide();
+	
+	});
+
+			$( '.mybtn4' ).click(function() {
+				$( '.mybtn4' ).hide();
+				 $( '.mybtn3' ).show();
+		  	$( ".editMe" ).slideUp();
+		  	
+	});
+
 });
 
 	

@@ -1,9 +1,44 @@
+ <style type="text/css">
+   table{
+      border-collapse:collapse;
+      margin-top:-150px;
+   }
+   </style>
+ </style>
  <section id="content">
    <div class="wrapper">
       
      <div id="container">
        <div id="myYield">
 <h2>Account Details <%= current_user.email %></h2>
+
+<!-- button to show order history -->
+<div class="showDetails"><span class="mybtn3">Show Order History</span><span class="mybtn4">Hide History</span></div>
+
+
+<div class="editMe">
+                    <% @myOrder = Order.all %>
+                    <table border="1" cellpadding="6" width="100%">
+                        <tr>
+                            <th>Cost</th>
+                            <th>Item</th>
+                            <th>Date</th>
+                        </tr><!-- create a variable to hold current user -->
+                        <%x = current_user.email %>
+                        <!-- display all orders from current user -->
+                        <% @myOrder.each do |g| %><%if g.email == x %>
+                        <tr>
+                            <td>
+                            <%=  number_to_currency(g.cost, :unit => '€' )  %></td>
+                            <td><%= g.item %></td>
+                            <td><%= g.created_at.strftime("%d %B. %Y") %></td>
+                        </tr><% else %><% end %><% end %>
+                    </table>
+                </div>
+                
+                
+                
+                
 <div class="signIn">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -36,44 +71,13 @@
     <%= f.submit "Update" %>
   </div>
 <% end %>
-<div class="editMe">
-<h3><br>Your orders</h3>
-  <% @myOrder = Order.all %>
 
-   <table width="100%">
-     <tr>
-       <th>Cost</th>
-       <th>Item</th>
-       <th>Email</th>
-       <th>Date</th>
-     </tr>
-     
-   <!-- display all orders from current user -->
-   <% @myOrder.each do |g| %>
-   
-  <!-- create a variable to hold current user -->
-     <%  x = current_user.email %>
-     
-       <% if g.email == x %>
-    
-        <tr>
-         <td> <%=  number_to_currency(g.cost, :unit => '€' )  %></td>
-         <td> <%= g.item %></td>
-         <td> <%= g.email %></td>
-         <td> <%= g.created_at.strftime("%d %B. %Y") %></td> 
-         <br>
-      
-        </tr>
-      <% end %>
-    <% end %>
-    
-    </table>
-    
-    </div>
+
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
 </div>
+
       </div>
       </div>
       </div>

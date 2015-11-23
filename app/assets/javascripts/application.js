@@ -35,11 +35,25 @@ $(document).ready(function(){
 		  	$( ".editMe" ).slideUp();
 		  	
 	});
+	
+
 
 });
 
 	
-	
+	function checkMe(){
+			var FullName = document.getElementById("n").value;
+				var cf1 = document.getElementById("cardField1");
+
+		if(FullName ==""){
+					alert("Working!");
+					document.getElementById("cardField1").style.display = "inline";
+						document.getElementById("submit").style.display = "none";
+						}else{
+							document.getElementById("submit").style.display = "block";
+						}
+		
+	}
 	// CONTACT FORM
 	function runMe(){				
 	

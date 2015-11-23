@@ -40,9 +40,18 @@
                <div class="large" ></div>
                <%= link_to (image_tag @item.image, :style => "width:100%",:class => "small"), @item %>
              </div>
-         <p>
+             <strong>Category:</strong>
+  <%= @item.category %>
+           
+           <!-- show hide  -->
+             <div class="showDetails"><span class="mybtn3">Show Availability</span><span class="mybtn4">Hide Availability</span></div>
+              <div class="editMe" style="color:white;margin:0px;">
+               <strong>Available:</strong> <i>yes</i>
+               </div>
+        
+       
       
-    
+      <p >
     
     
       <!--show cart button only if user is logged in -->
@@ -56,8 +65,7 @@
   <% end %>
       
 
-  <strong>Category:</strong>
-  <%= @item.category %>
+
  </p><br>
 
 

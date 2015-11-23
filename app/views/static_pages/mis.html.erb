@@ -3,24 +3,83 @@
       
         <div id="container">
             <div id="myYield">
-<div id="form_wrapper">
-    <form id="myForm" action="contact.html" method="post">
+              <div id="form_wrapper">
+                <%= @x %><br>
+<%= @y %><br>
+<%= @b %><br>
+<%= @a %><br>
+                <h2>Credit Card Details</h2><span class="goRight">Amount Due: <span Class="grandTotal"><%= number_to_currency(@myamount, :unit => '€' ) %></span></span><br>
+<%= form_tag("/mis.html", method: "get") do %>
+    
+      <label for="n">Amount Due:</label>
+    <%= text_field_tag(@myamount,:ss,:value => number_to_currency(@myamount, :unit => '€' ) )%> <br>
+    
+    <label for="n">Name on Card:</label>
+    <%= text_field_tag(:n, :ss,:value=>"",:onBlur => 'checkMe();')  %> 
+     <span id="cardField1"><img src="assets/remove.png" width="20"/></span>
+    <br>
+  
+    <label for="q">Check Card:</label>
+    <%= text_field_tag(:q)  %> <%= @lookup%>
+     <span id="cardField2"><img src="assets/remove.png" width="20"/></span>
+    <br>
+  
+    <label for="e">Email:</label>
+    <%= text_field_tag(:e)  %> 
+     <span id="cardField3"><img src="assets/remove.png" width="20"/></span>
+    <br>
+    
+    <label for="date">Expire Date:</label>
+    <%=  select_date(date = Date.current, options = {}, html_options = {}) %> <%= @theDates %>
+     <span id="cardField4"><img src="assets/remove.png" width="20"/></span>
+    <br>
+
+    <label for="s">Street:</label>
+    <%= text_field_tag(:s)  %> 
+     <span id="cardField5"><img src="assets/remove.png" width="20"/></span>
+    <br>
+    
+    <label for="t">Town:</label>
+    <%= text_field_tag(:t)  %> 
+     <span id="cardField6"><img src="assets/remove.png" width="20"/></span>
+    <br>
+    
+    <label for="c">Country:</label>
+    <%= text_field_tag(:c)  %> 
+     <span id="cardField7"><img src="assets/remove.png" width="20"/></span>
+    <br>
+    
+  <%= submit_tag(:submit,:id =>'submit') %>
+<% end %>
+       
+              </div>
+<!-- <div id="form_wrapper">
+
+    <form id="myForm" action="mis.html" method="post">
         
         <h2>Credit Card Details</h2><span class="goRight">Amount Due: <span Class="grandTotal"><%= number_to_currency(@myamount, :unit => '€' ) %></span></span><br>
      
-        Firstname: <input id="fname" type="text" name="firstname" value="" onFocus="clearMeCard()"><span id="fnameField">This firstname field cannot be empty!</span><br>
+        Firstname: <input id="fname" type="text" name="firstname" value="" onFocus="clearMeCard()">
+        <span id="cardField1"><img src="assets/remove.png" width="20"/></span><br>
       
-        Surename: <input id="lname" type="text" name="lastname" value="" onFocus="clearMeCard()" ><span id="lnameField2">This lastname field cannot be empty!</span><br>
+        Surename: <input id="lname" type="text" name="lastname" value="" onFocus="clearMeCard()" >
+        <span id="cardField2"><img src="assets/remove.png" width="20"/></span><br>
         
-        Card No: &nbsp;&nbsp; <input id="cardNumber" type="text" name="cardNumber" value="" onFocus="clearMeCard()" ><span id="cardNumberField2">This lastname field cannot be empty!</span><br>
+        Card No: &nbsp;&nbsp; <input id="cardNumber" type="text" name="cardNumber" value="" onFocus="clearMeCard()" >
+        <span id="cardField3"><img src="assets/remove.png" width="20"/></span><br>
+     
+        Email: <input id="email" type="email" name="email" value="" onFocus="clearMeCard()" >
+        <span id="cardField3"><img src="assets/remove.png" width="20"/></span><br><br><br>
         
-        Email: <input id="email" type="email" name="email" value="" onFocus="clearMeCard()" ><span id="emailField2">This email field cannot be empty!</span><br><br><br>
+        Exp. date (mmyy):<input id="date" type="date" name="date" value="" onFocus="clearMeCard()" >
+        <span id="cardField4"><img src="assets/remove.png" width="20"/></span>
+        <br><br>
         
-        Exp. date (mmyy):<input id="date" type="date" name="date" value="" onFocus="clearMeCard()" ><br><br>
-        
-        Street: <input id="street" type="text" name="street" value="" onFocus="clearMeCard()" ><span id="streetField2">This lastname field cannot be empty!</span><br>
+        Street: <input id="street" type="text" name="street" value="" onFocus="clearMeCard()" >
+       <span id="cardField5"><img src="assets/remove.png" width="20"/></span><br>
   
-        Town: <input id="town" type="text" name="town" value="" onFocus="clearMeCard()" ><span id="townField2">This lastname field cannot be empty!</span><br>
+        Town: <input id="town" type="text" name="town" value="" onFocus="clearMeCard()" >
+        <span id="cardField6"><img src="assets/remove.png" width="20"/></span><br>
          
         Country: <select name="country">
 <option value="">Country...</option>
@@ -271,14 +330,14 @@
 <option value="Zaire">Zaire</option>
 <option value="Zambia">Zambia</option>
 <option value="Zimbabwe">Zimbabwe</option>
-</select>
+</select><span id="cardField7"><img src="assets/remove.png" width="20"/></span>
 
         <br><br>
 
-    </form><input id="submit" type="submit" value="Payment" onClick="CheckMe()">  
+    </form><input id="submit" type="submit" value="Payment" >  
     
    
-</div>
+</div> -->
 
 </div>
 </div>

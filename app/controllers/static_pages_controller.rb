@@ -34,9 +34,8 @@ class StaticPagesController < ApplicationController
   end
 
   def mis
-  lookup1 = params[:q]
-  @theDate = params[:date]
-  
+   lookup1 = params[:q]
+   @theDate = params[:date]
    @myamount =  params[:amount]
   
    if lookup1.present?
@@ -44,12 +43,14 @@ class StaticPagesController < ApplicationController
    else
      @lookup = ""
    end
-  
-   @y = luhn(49927398717)
-   @a =  luhn(1234567812345678)
-   @b = luhn(1234567812345670)
-  
 
+
+   if params[:t].present? && params[:c].present? && params[:n].present? && params[:q].present?  && params[:e].present? && params[:s].present? && params[:date].present?
+   @para = "Your form has been submitted "
+  else
+    @para = "You must fill all the fields"
+   end
+  
   end
  
  

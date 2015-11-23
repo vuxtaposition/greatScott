@@ -43,17 +43,30 @@ $(document).ready(function(){
 	
 	function checkMe(){
 			var FullName = document.getElementById("n").value;
-				var cf1 = document.getElementById("cardField1");
+			
 
 		if(FullName ==""){
-					alert("Working!");
 					document.getElementById("cardField1").style.display = "inline";
 						document.getElementById("submit").style.display = "none";
+						//return false;
 						}else{
 							document.getElementById("submit").style.display = "block";
 						}
-		
-	}
+		}
+		function checkMe2(){
+			var cardNo = document.getElementById("q").value;						
+			if(cardNo ==""){
+				alert(22);
+					document.getElementById("cardField2").style.display = "inline";
+						//document.getElementById("submit").style.display = "none";
+						//return false;
+						}else{
+							//document.getElementById("submit").style.display = "block";
+						}
+			}
+	
+	
+	
 	// CONTACT FORM
 	function runMe(){				
 	
@@ -62,7 +75,7 @@ $(document).ready(function(){
 	var myFname = document.getElementById("fname").value;
 	var myLname = document.getElementById("lname").value;
 	var myText = document.getElementById("comment").value;
-  var myRadios = document.getElementsByName('newsletter');
+    var myRadios = document.getElementsByName('newsletter');
 
         for (var i = 0, length = myRadios.length; i < length; i++) {
             if (myRadios[i].checked) {

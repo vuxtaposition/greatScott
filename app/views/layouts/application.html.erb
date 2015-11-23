@@ -61,13 +61,11 @@
 	  <% if user_signed_in? %>
 	  
 	  <!-- if logged in show cart image and edit profile -->
-	                     
-	                     
+	  
 	                     <!-- display administator image if admin is logged in -->
 	                     <% if current_user.email  == 'alan@mail.com' %>
                               <img class="adminPic" src="/assets/admin.png" width="80px" alt="header pic" />
                         <% end %>
-         
          
           <strong style="color:brown"><%= current_user.email %></strong>.
           
@@ -76,13 +74,7 @@
           <%= link_to image_tag("cart.jpg", :width => '24px'),"/cart/"  %>
           
           
-          <%= render '/cart/cartAmount' %>
-          
-          |
-          
-          
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-        
+          <%= render '/cart/cartAmount' %> |  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |

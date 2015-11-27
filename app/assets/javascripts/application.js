@@ -56,7 +56,7 @@ $(document).ready(function(){
 		function checkMe2(){
 			var cardNo = document.getElementById("q").value;						
 			if(cardNo ==""){
-				alert(22);
+				//alert(22);
 					document.getElementById("cardField2").style.display = "inline";
 						//document.getElementById("submit").style.display = "none";
 						//return false;

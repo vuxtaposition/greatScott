@@ -17,14 +17,14 @@
             
             
             
-          
+       <!-- loop through the images to display in the slider -->   
      <%   @items = Item.all %>
-                 <% @items.each do |g| %>
+       <% @items.each do |g| %>
                
-                    <div data-p="150.00" style="display: none;"><a href="items/<%= g.id %>"><img data-u="image" src="/assets/<%= g.image %>" /></a><img data-u="thumb" src="/assets/<%= g.image %>" /> </div>'; 
+       <div data-p="150.00" style="display: none;"><a href="items/<%= g.id %>"><img data-u="image" src="/assets/<%= g.image %>" /></a><img data-u="thumb" src="/assets/<%= g.image %>" /> </div> 
                          
                           
-                           <% end %>
+     <% end %>
              
            
             

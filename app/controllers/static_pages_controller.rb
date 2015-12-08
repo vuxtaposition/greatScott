@@ -49,6 +49,9 @@ class StaticPagesController < ApplicationController
    @para = "Your form has been submitted "
   else
     @para = "You must fill all the fields"
+  
+
+  
    end
   
   end
